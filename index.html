@@ -566,9 +566,9 @@ function rPoly(a) {
   } else {
     h+='<div class="qlbl" style="margin-top:6px">What is the charge?</div>';
     h+='<div class="cdsp">'+curPI.f+'</div>';
-    h+='<div class="hint">Type just the charge, e.g. <em>-1</em> or <em>-2</em></div>';
+    h+='<div class="hint">Type just the charge, e.g. <em>1-</em> or <em>2-</em></div>';
     h+=stb('pI');
-    h+='<input class="ci" id="pI" placeholder="-1, -2, +1..." onkeydown="if(event.key===\'Enter\')sPC()"/>';
+    h+='<input class="ci" id="pI" placeholder="1-, 2-, 1+..." onkeydown="if(event.key===\'Enter\')sPC()"/>';
     h+='<div class="brow"><button class="btn pri" onclick="sPC()">Check &#x23CE;</button><button class="btn" onclick="rPoly(g(\'main\'))">Skip</button></div>';
   }
   h+='<div id="pR"></div></div>';
