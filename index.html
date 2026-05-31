@@ -554,7 +554,7 @@ function rPoly(a) {
   if(r3<0.33) {
     h+='<div class="qlbl" style="margin-top:6px">Formula + charge for this ion</div>';
     h+='<div class="ndsp">'+curPI.n+'</div>';
-    h+='<div class="hint">Write formula AND charge, e.g. <em>NO&#x2083;&#x207B;</em></div>';
+    h+='<div class="hint">Write formula AND charge, e.g. <em>NO&#x2083;1-</em></div>';
     h+=stb('pI');
     h+='<input class="ci" id="pI" placeholder="formula + charge" onkeydown="if(event.key===\'Enter\')sPF()"/>';
     h+='<div class="brow"><button class="btn pri" onclick="sPF()">Check &#x23CE;</button><button class="btn" onclick="rPoly(g(\'main\'))">Skip</button></div>';
@@ -566,9 +566,9 @@ function rPoly(a) {
   } else {
     h+='<div class="qlbl" style="margin-top:6px">What is the charge?</div>';
     h+='<div class="cdsp">'+curPI.f+'</div>';
-    h+='<div class="hint">Type just the charge, e.g. <em>1-</em> or <em>2-</em></div>';
+    h+='<div class="hint">Type just the charge, e.g. <em>-</em> or <em>2-</em></div>';
     h+=stb('pI');
-    h+='<input class="ci" id="pI" placeholder="1-, 2-, 1+..." onkeydown="if(event.key===\'Enter\')sPC()"/>';
+    h+='<input class="ci" id="pI" placeholder="-, 2-, 3-..." onkeydown="if(event.key===\'Enter\')sPC()"/>';
     h+='<div class="brow"><button class="btn pri" onclick="sPC()">Check &#x23CE;</button><button class="btn" onclick="rPoly(g(\'main\'))">Skip</button></div>';
   }
   h+='<div id="pR"></div></div>';
@@ -600,9 +600,12 @@ function sPN() {
 }
 function sPC() {
   var e=g('pI'); if(!e||!e.value.trim()) return;
-  var ok=norm(e.value.trim())===norm(curPI.cr);
+  var input=norm(e.value.trim());
+  var answer=norm(curPI.cr);
+  var ok=input===answer || (answer==='1-' && input==='-') || (answer==='1+' && input==='+');
   if(ok){correct++;streak++;}else streak=0; updS(); e.disabled=true;
-  polyFeedback(ok,'charge <strong>'+curPI.cr+'</strong>');
+  var disp=curPI.cr==='1-'?'-':curPI.cr==='1+'?'+':curPI.cr;
+  polyFeedback(ok,'charge <strong>'+disp+'</strong>');
 }
 
 // ── IONIC OR COVALENT ─────────────────────────────────────────────────────────
