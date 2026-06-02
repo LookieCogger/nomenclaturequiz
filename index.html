@@ -20,7 +20,7 @@
   --rd:#9e2020;--rdbg:#fce8e8;--rdtx:#6b0e0e;
   --okbg:#e6f2d8;--oktx:#1a4205;
   --sb:#1c1c1a;--sbt:#b0b0a8;--sbh:#2a2a28;--sba:#363632;
-  --r:8px;--rl:12px;--fn:'Sora',sans-serif;--mo:'IBM Plex Mono',monospace
+  --r:8px;--rl:12px;--fn:"Sora",sans-serif;--mo:"IBM Plex Mono",monospace
 }
 @media(prefers-color-scheme:dark){:root{
   --bg:#141412;--sf:#202020;--s2:#282826;--s3:#303030;
@@ -37,14 +37,14 @@
 body{font-family:var(--fn);background:var(--bg);color:var(--tx);min-height:100vh}
 .shell{display:flex;min-height:100vh}
 .sidebar{width:220px;flex-shrink:0;background:var(--sb);display:flex;flex-direction:column;padding:1rem 0;position:sticky;top:0;height:100vh;overflow-y:auto;z-index:100}
-.sb-logo{font-size:16px;font-weight:600;color:#fff;padding:0 1rem 1rem;letter-spacing:-.01em}
+.sb-logo{font-size:16px;font-weight:600;color:#fff;padding:0 1rem 1rem}
 .sb-logo span{color:#5a9ae0}
 .sb-sec{font-size:10px;font-weight:600;color:var(--sbt);letter-spacing:.08em;text-transform:uppercase;padding:.5rem 1rem .2rem}
 .sb-btn{display:flex;align-items:center;gap:8px;padding:8px 1rem;background:none;border:none;color:var(--sbt);font-family:var(--fn);font-size:13px;font-weight:500;cursor:pointer;text-align:left;width:100%;transition:background .1s,color .1s}
 .sb-btn:hover{background:var(--sbh);color:#fff}
 .sb-btn.active{background:var(--sba);color:#fff;border-left:2px solid #5a9ae0}
 .sb-icon{font-size:13px;width:16px;text-align:center;flex-shrink:0}
-.sb-stats{border-top:.5px solid rgba(255,255,255,.08);margin-top:auto;padding:1rem;display:flex;gap:0}
+.sb-stats{border-top:.5px solid rgba(255,255,255,.08);margin-top:auto;padding:1rem;display:flex}
 .sb-stat{flex:1;text-align:center;font-size:11px;color:var(--sbt)}
 .sb-stat b{display:block;font-size:20px;font-weight:600;color:#fff;margin-bottom:2px}
 .ham{display:none;position:fixed;top:10px;left:10px;z-index:200;background:var(--sb);color:#fff;border:none;border-radius:var(--r);padding:7px 10px;font-size:17px;cursor:pointer}
@@ -67,8 +67,6 @@ body{font-family:var(--fn);background:var(--bg);color:var(--tx);min-height:100vh
 .cbtn.active.ci{background:var(--blbg);color:var(--bltx);border-color:var(--blue)}
 .cbtn.active.cc{background:var(--gnbg);color:var(--gntx);border-color:var(--gn)}
 .cbtn.active.cp{background:var(--ambg);color:var(--amtx);border-color:var(--am)}
-.pbar{height:3px;background:var(--s2);border-radius:2px;margin-bottom:1.25rem;overflow:hidden}
-.pfill{height:100%;background:var(--blue);border-radius:2px;transition:width .3s}
 .card{background:var(--sf);border:.5px solid var(--bd);border-radius:var(--rl);padding:1.5rem;margin-bottom:1rem}
 .qlbl{font-size:11px;font-weight:600;color:var(--t3);letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}
 .bdg{display:inline-block;font-size:11px;padding:2px 9px;border-radius:10px;font-weight:500;margin-bottom:10px}
@@ -99,8 +97,8 @@ body{font-family:var(--fn);background:var(--bg);color:var(--tx);min-height:100vh
 .mopt.correct{background:var(--okbg);color:var(--oktx);border-color:var(--gn)}
 .mopt.wrong{background:var(--rdbg);color:var(--rdtx);border-color:var(--rd)}
 .mopt.reveal{background:var(--okbg);color:var(--oktx);border-color:var(--gn)}
-.fc{background:var(--sf);border:.5px solid var(--bd);border-radius:var(--rl);padding:2.5rem 1.5rem;margin-bottom:1rem;text-align:center;cursor:pointer;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:background .15s;user-select:none}
-.fc:hover{background:var(--s2)}
+.fc-card{background:var(--sf);border:.5px solid var(--bd);border-radius:var(--rl);padding:2.5rem 1.5rem;margin-bottom:1rem;text-align:center;cursor:pointer;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:background .15s;user-select:none}
+.fc-card:hover{background:var(--s2)}
 .fclbl{font-size:11px;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
 .fcc{font-size:26px;font-weight:500;font-family:var(--mo);color:var(--tx);line-height:1.3}
 .fcn{font-size:20px;font-weight:500;color:var(--tx)}
@@ -122,7 +120,7 @@ body{font-family:var(--fn);background:var(--bg);color:var(--tx);min-height:100vh
 .cblbl input{width:15px;height:15px;cursor:pointer;accent-color:var(--blue)}
 .tabrow{display:flex;gap:0;border-bottom:.5px solid var(--bd);margin-bottom:1.25rem;overflow-x:auto;scrollbar-width:none}
 .tabrow::-webkit-scrollbar{display:none}
-.tab{padding:9px 14px;font-size:13px;font-family:var(--fn);cursor:pointer;color:var(--t2);border-bottom:2px solid transparent;margin-bottom:-1px;background:none;border-top:none;border-left:none;border-right:none;white-space:nowrap;transition:color .1s}
+.tab{padding:9px 14px;font-size:13px;font-family:var(--fn);cursor:pointer;color:var(--t2);border-bottom:2px solid transparent;margin-bottom:-1px;background:none;border-top:none;border-left:none;border-right:none;white-space:nowrap}
 .tab:hover{color:var(--tx)}
 .tab.active{color:var(--blue);border-bottom-color:var(--blue);font-weight:600}
 .rcard{background:var(--sf);border:.5px solid var(--bd);border-radius:var(--rl);padding:1rem 1.25rem;margin-bottom:10px;border-left-width:3px}
@@ -131,17 +129,16 @@ body{font-family:var(--fn);background:var(--bg);color:var(--tx);min-height:100vh
 .rcard strong{color:var(--tx);font-weight:600}
 .pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}
 .pitm{background:var(--s2);border:.5px solid var(--bd);border-radius:var(--r);padding:8px 13px;display:flex;justify-content:space-between;align-items:center}
-.pref-name{font-family:var(--mo);font-weight:500;font-size:14px}
-.pref-num{color:var(--t2);font-size:13px}
+.pref-n{font-family:var(--mo);font-weight:500;font-size:14px}
+.pref-d{color:var(--t2);font-size:13px}
 .notice{margin-top:12px;font-size:13px;color:var(--amtx);background:var(--ambg);border-radius:var(--r);padding:10px 14px;line-height:1.6}
 .prgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
 @media(max-width:480px){.prgrid{grid-template-columns:1fr}}
 .prc{background:var(--s2);border-radius:var(--r);padding:10px 12px;border:.5px solid var(--bd)}
-.prcn{font-size:13px;font-weight:500}.prcf{font-size:13px;font-family:var(--mo);color:var(--blue);margin-top:3px}
+.prcn{font-size:13px;font-weight:500}
+.prcf{font-size:13px;font-family:var(--mo);color:var(--blue);margin-top:3px}
 .qhdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:6px}
-.qnum{font-size:12px;color:var(--t2)}
-.qsc{font-size:13px;font-weight:600}
-.qcard{background:var(--sf);border:.5px solid var(--bd);border-radius:var(--rl);padding:1.25rem;position:relative}
+.qcard{background:var(--sf);border:.5px solid var(--bd);border-radius:var(--rl);padding:1.25rem;margin-bottom:12px}
 .qcdsp{font-family:var(--mo);font-size:20px;font-weight:500;margin:.4rem 0 .7rem;word-break:break-all}
 .qndsp{font-size:16px;font-weight:500;margin:.4rem 0 .7rem}
 .qinput{width:100%;font-size:14px;font-family:var(--fn);border:.5px solid var(--bds);border-radius:var(--r);padding:8px 12px;background:var(--sf);color:var(--tx);outline:none;transition:border-color .15s}
@@ -162,8 +159,8 @@ body{font-family:var(--fn);background:var(--bg);color:var(--tx);min-height:100vh
 .lcard{background:var(--sf);border:.5px solid var(--bd);border-radius:var(--rl);padding:1.5rem;margin-bottom:1rem}
 .lcard h2{font-size:17px;font-weight:600;margin-bottom:.6rem}
 .lcard p{font-size:13px;color:var(--t2);line-height:1.8;margin-bottom:.75rem}
-.lcard .ex{background:var(--s2);border-radius:var(--r);padding:10px 14px;font-family:var(--mo);font-size:13px;margin:.5rem 0;border-left:3px solid var(--blue);line-height:1.7}
-.lcard .exlbl{font-size:10px;font-weight:600;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;font-family:var(--fn)}
+.lcard .ex{background:var(--s2);border-radius:var(--r);padding:10px 14px;font-size:13px;margin:.5rem 0;border-left:3px solid var(--blue);line-height:1.7}
+.lcard .exlbl{font-size:10px;font-weight:600;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
 .step{display:flex;gap:10px;margin:.4rem 0;font-size:13px;color:var(--t2);line-height:1.6}
 .stepn{width:20px;height:20px;border-radius:50%;background:var(--blbg);color:var(--bltx);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
 .lgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:1.5rem}
@@ -175,11 +172,11 @@ body{font-family:var(--fn);background:var(--bg);color:var(--tx);min-height:100vh
 .ltile p{font-size:12px;color:var(--t2);line-height:1.5}
 .ltile.done{border-color:var(--gn)}
 .done-tag{font-size:11px;color:var(--gntx);margin-top:5px;font-weight:600}
-.pt-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:300;display:flex;align-items:center;justify-content:center;padding:1rem}
+.pt-ov{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:300;display:flex;align-items:center;justify-content:center;padding:1rem}
 .pt-modal{background:var(--sf);border-radius:var(--rl);max-width:98vw;width:880px;max-height:90vh;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.35)}
-.pt-hdr{display:flex;justify-content:space-between;align-items:center;padding:.7rem 1rem;border-bottom:.5px solid var(--bd);font-weight:600;font-size:15px;position:sticky;top:0;background:var(--sf);z-index:1}
+.pt-hdr{display:flex;justify-content:space-between;align-items:center;padding:.7rem 1rem;border-bottom:.5px solid var(--bd);font-weight:600;font-size:15px;position:sticky;top:0;background:var(--sf)}
 .pt-close{background:none;border:none;font-size:18px;cursor:pointer;color:var(--t2);padding:2px 6px;border-radius:4px}
-.pt-close:hover{background:var(--s2);color:var(--tx)}
+.pt-close:hover{background:var(--s2)}
 .pt-body{padding:.75rem;overflow-x:auto}
 .pt-grid{display:grid;grid-template-columns:repeat(18,minmax(30px,1fr));gap:2px;min-width:560px}
 .el{border-radius:4px;padding:3px 2px;text-align:center;font-size:9px;line-height:1.3;border:.5px solid transparent}
@@ -215,7 +212,7 @@ sub{font-size:.6em;vertical-align:sub}
 </style>
 </head>
 <body>
-<div id="ptOverlay" class="pt-overlay hidden" onclick="if(event.target===this)togglePT()">
+<div id="ptOverlay" class="pt-ov hidden" onclick="if(event.target===this)togglePT()">
   <div class="pt-modal">
     <div class="pt-hdr"><span>Periodic Table</span><button class="pt-close" onclick="togglePT()">&#x2715;</button></div>
     <div class="pt-body" id="ptBody"></div>
@@ -232,6 +229,7 @@ sub{font-size:.6em;vertical-align:sub}
     <button class="sb-btn" data-m="ioc" onclick="setMode('ioc')"><span class="sb-icon">?</span>Ionic or Covalent</button>
     <button class="sb-btn" data-m="mcq" onclick="setMode('mcq')"><span class="sb-icon">&#x25CE;</span>Multiple Choice</button>
     <button class="sb-btn" data-m="fc" onclick="setMode('fc')"><span class="sb-icon">&#x1F0CF;</span>Flashcards</button>
+    <button class="sb-btn" data-m="shuffle" onclick="setMode('shuffle')"><span class="sb-icon">&#x1F500;</span>Shuffle Practice</button>
     <div class="sb-sec" style="margin-top:10px">Test</div>
     <button class="sb-btn" data-m="quiz" onclick="setMode('quiz')"><span class="sb-icon">&#x1F4DD;</span>Quiz (30 Qs)</button>
     <div class="sb-sec" style="margin-top:10px">Reference</div>
@@ -244,792 +242,627 @@ sub{font-size:.6em;vertical-align:sub}
     </div>
   </aside>
   <button class="ham" onclick="document.getElementById('sidebar').classList.toggle('open')">&#9776;</button>
-  <main class="content">
-    <div id="main"></div>
-  </main>
+  <main class="content"><div id="main"></div></main>
 </div>
 <script>
-// ── DATA ──────────────────────────────────────────────────────────────────────
 var PI=[
-{n:'ammonium',f:'NH&#x2084;',fr:'NH4',c:'+',cr:'1+'},
-{n:'hydroxide',f:'OH',fr:'OH',c:'&#x207B;',cr:'1-'},
-{n:'nitrate',f:'NO&#x2083;',fr:'NO3',c:'&#x207B;',cr:'1-'},
-{n:'nitrite',f:'NO&#x2082;',fr:'NO2',c:'&#x207B;',cr:'1-'},
-{n:'sulfate',f:'SO&#x2084;',fr:'SO4',c:'&#xB2;&#x207B;',cr:'2-'},
-{n:'sulfite',f:'SO&#x2083;',fr:'SO3',c:'&#xB2;&#x207B;',cr:'2-'},
-{n:'carbonate',f:'CO&#x2083;',fr:'CO3',c:'&#xB2;&#x207B;',cr:'2-'},
-{n:'bicarbonate',f:'HCO&#x2083;',fr:'HCO3',c:'&#x207B;',cr:'1-'},
-{n:'phosphate',f:'PO&#x2084;',fr:'PO4',c:'&#xB3;&#x207B;',cr:'3-'},
-{n:'permanganate',f:'MnO&#x2084;',fr:'MnO4',c:'&#x207B;',cr:'1-'},
-{n:'perchlorate',f:'ClO&#x2084;',fr:'ClO4',c:'&#x207B;',cr:'1-'},
-{n:'chlorate',f:'ClO&#x2083;',fr:'ClO3',c:'&#x207B;',cr:'1-'},
-{n:'chlorite',f:'ClO&#x2082;',fr:'ClO2',c:'&#x207B;',cr:'1-'},
-{n:'hypochlorite',f:'ClO',fr:'ClO',c:'&#x207B;',cr:'1-'},
-{n:'chromate',f:'CrO&#x2084;',fr:'CrO4',c:'&#xB2;&#x207B;',cr:'2-'},
-{n:'dichromate',f:'Cr&#x2082;O&#x2087;',fr:'Cr2O7',c:'&#xB2;&#x207B;',cr:'2-'},
-{n:'acetate',f:'C&#x2082;H&#x2083;O&#x2082;',fr:'C2H3O2',c:'&#x207B;',cr:'1-'},
-{n:'cyanide',f:'CN',fr:'CN',c:'&#x207B;',cr:'1-'},
-{n:'peroxide',f:'O&#x2082;',fr:'O2',c:'&#xB2;&#x207B;',cr:'2-'},
-{n:'bromate',f:'BrO&#x2083;',fr:'BrO3',c:'&#x207B;',cr:'1-'},
-{n:'iodate',f:'IO&#x2083;',fr:'IO3',c:'&#x207B;',cr:'1-'},
-{n:'thiosulfate',f:'S&#x2082;O&#x2083;',fr:'S2O3',c:'&#xB2;&#x207B;',cr:'2-'}
+  {n:"ammonium",f:"NH&#x2084;",fr:"NH4",c:"+",cr:"1+"},
+  {n:"nitrite",f:"NO&#x2082;",fr:"NO2",c:"&#x207B;",cr:"1-"},
+  {n:"nitrate",f:"NO&#x2083;",fr:"NO3",c:"&#x207B;",cr:"1-"},
+  {n:"hydroxide",f:"OH",fr:"OH",c:"&#x207B;",cr:"1-"},
+  {n:"cyanide",f:"CN",fr:"CN",c:"&#x207B;",cr:"1-"},
+  {n:"permanganate",f:"MnO&#x2084;",fr:"MnO4",c:"&#x207B;",cr:"1-"},
+  {n:"hydrogen carbonate",f:"HCO&#x2083;",fr:"HCO3",c:"&#x207B;",cr:"1-"},
+  {n:"hypochlorite",f:"ClO",fr:"ClO",c:"&#x207B;",cr:"1-"},
+  {n:"chlorite",f:"ClO&#x2082;",fr:"ClO2",c:"&#x207B;",cr:"1-"},
+  {n:"chlorate",f:"ClO&#x2083;",fr:"ClO3",c:"&#x207B;",cr:"1-"},
+  {n:"perchlorate",f:"ClO&#x2084;",fr:"ClO4",c:"&#x207B;",cr:"1-"},
+  {n:"bromate",f:"BrO&#x2083;",fr:"BrO3",c:"&#x207B;",cr:"1-"},
+  {n:"iodate",f:"IO&#x2083;",fr:"IO3",c:"&#x207B;",cr:"1-"},
+  {n:"periodate",f:"IO&#x2084;",fr:"IO4",c:"&#x207B;",cr:"1-"},
+  {n:"acetate",f:"C&#x2082;H&#x2083;O&#x2082;",fr:"C2H3O2",c:"&#x207B;",cr:"1-"},
+  {n:"dihydrogen phosphate",f:"H&#x2082;PO&#x2084;",fr:"H2PO4",c:"&#x207B;",cr:"1-"},
+  {n:"carbonate",f:"CO&#x2083;",fr:"CO3",c:"&#xB2;&#x207B;",cr:"2-"},
+  {n:"sulfite",f:"SO&#x2083;",fr:"SO3",c:"&#xB2;&#x207B;",cr:"2-"},
+  {n:"sulfate",f:"SO&#x2084;",fr:"SO4",c:"&#xB2;&#x207B;",cr:"2-"},
+  {n:"thiosulfate",f:"S&#x2082;O&#x2083;",fr:"S2O3",c:"&#xB2;&#x207B;",cr:"2-"},
+  {n:"peroxide",f:"O&#x2082;",fr:"O2",c:"&#xB2;&#x207B;",cr:"2-"},
+  {n:"chromate",f:"CrO&#x2084;",fr:"CrO4",c:"&#xB2;&#x207B;",cr:"2-"},
+  {n:"dichromate",f:"Cr&#x2082;O&#x2087;",fr:"Cr2O7",c:"&#xB2;&#x207B;",cr:"2-"},
+  {n:"hydrogen phosphate",f:"HPO&#x2084;",fr:"HPO4",c:"&#xB2;&#x207B;",cr:"2-"},
+  {n:"phosphate",f:"PO&#x2084;",fr:"PO4",c:"&#xB3;&#x207B;",cr:"3-"},
+  {n:"arsenate",f:"AsO&#x2084;",fr:"AsO4",c:"&#xB3;&#x207B;",cr:"3-"}
 ];
 var IQ=[
-  {f:'K&#x2082;S',fr:'K2S',n:'potassium sulfide',t:'ionic'},
-  {f:'MgO',fr:'MgO',n:'magnesium oxide',t:'ionic'},
-  {f:'NaCl',fr:'NaCl',n:'sodium chloride',t:'ionic'},
-  {f:'CaBr&#x2082;',fr:'CaBr2',n:'calcium bromide',t:'ionic'},
-  {f:'Li&#x2082;O',fr:'Li2O',n:'lithium oxide',t:'ionic'},
-  {f:'AlCl&#x2083;',fr:'AlCl3',n:'aluminum chloride',t:'ionic'},
-  {f:'Mg&#x2083;N&#x2082;',fr:'Mg3N2',n:'magnesium nitride',t:'ionic'},
-  {f:'BaF&#x2082;',fr:'BaF2',n:'barium fluoride',t:'ionic'},
-  {f:'Sr&#x2083;N&#x2082;',fr:'Sr3N2',n:'strontium nitride',t:'ionic'},
-  {f:'Rb&#x2083;P',fr:'Rb3P',n:'rubidium phosphide',t:'ionic'},
-  {f:'Li&#x2083;N',fr:'Li3N',n:'lithium nitride',t:'ionic'},
-  {f:'CaO',fr:'CaO',n:'calcium oxide',t:'ionic'},
-  {f:'KI',fr:'KI',n:'potassium iodide',t:'ionic'},
-  {f:'SrS',fr:'SrS',n:'strontium sulfide',t:'ionic'},
-  {f:'AlBr&#x2083;',fr:'AlBr3',n:'aluminum bromide',t:'ionic'},
-  {f:'Na&#x2082;O',fr:'Na2O',n:'sodium oxide',t:'ionic'},
-  {f:'BeCl&#x2082;',fr:'BeCl2',n:'beryllium chloride',t:'ionic'},
-  {f:'CsCl',fr:'CsCl',n:'cesium chloride',t:'ionic'},
-  {f:'MgS',fr:'MgS',n:'magnesium sulfide',t:'ionic'},
-  {f:'BaBr&#x2082;',fr:'BaBr2',n:'barium bromide',t:'ionic'},
-  {f:'MnO',fr:'MnO',n:'manganese(II) oxide',t:'ionic'},
-  {f:'FeO',fr:'FeO',n:'iron(II) oxide',t:'ionic'},
-  {f:'Fe&#x2082;O&#x2083;',fr:'Fe2O3',n:'iron(III) oxide',t:'ionic'},
-  {f:'CuCl',fr:'CuCl',n:'copper(I) chloride',t:'ionic'},
-  {f:'CuCl&#x2082;',fr:'CuCl2',n:'copper(II) chloride',t:'ionic'},
-  {f:'SnS',fr:'SnS',n:'tin(II) sulfide',t:'ionic'},
-  {f:'PbO&#x2082;',fr:'PbO2',n:'lead(IV) oxide',t:'ionic'},
-  {f:'MnF&#x2084;',fr:'MnF4',n:'manganese(IV) fluoride',t:'ionic'},
-  {f:'Ni&#x2083;P&#x2082;',fr:'Ni3P2',n:'nickel(II) phosphide',t:'ionic'},
-  {f:'PbCl&#x2082;',fr:'PbCl2',n:'lead(II) chloride',t:'ionic'},
-  {f:'MoO&#x2082;',fr:'MoO2',n:'molybdenum(IV) oxide',t:'ionic'},
-  {f:'V&#x2082;O&#x2085;',fr:'V2O5',n:'vanadium(V) oxide',t:'ionic'},
-  {f:'SnO',fr:'SnO',n:'tin(II) oxide',t:'ionic'},
-  {f:'Ag&#x2082;S',fr:'Ag2S',n:'silver sulfide',t:'ionic'},
-  {f:'CuS',fr:'CuS',n:'copper(II) sulfide',t:'ionic'},
-  {f:'Cr&#x2082;O&#x2083;',fr:'Cr2O3',n:'chromium(III) oxide',t:'ionic'},
-  {f:'MnO&#x2082;',fr:'MnO2',n:'manganese(IV) oxide',t:'ionic'},
-  {f:'Fe&#x2082;S&#x2083;',fr:'Fe2S3',n:'iron(III) sulfide',t:'ionic'},
-  {f:'NiBr&#x2082;',fr:'NiBr2',n:'nickel(II) bromide',t:'ionic'},
-  {f:'ZnS',fr:'ZnS',n:'zinc sulfide',t:'ionic'},
-  {f:'CoO',fr:'CoO',n:'cobalt(II) oxide',t:'ionic'},
-  {f:'TiO&#x2082;',fr:'TiO2',n:'titanium(IV) oxide',t:'ionic'},
-  {f:'PbS',fr:'PbS',n:'lead(II) sulfide',t:'ionic'}
+  {f:"K&#x2082;S",fr:"K2S",n:"potassium sulfide",t:"ionic"},
+  {f:"MgO",fr:"MgO",n:"magnesium oxide",t:"ionic"},
+  {f:"NaCl",fr:"NaCl",n:"sodium chloride",t:"ionic"},
+  {f:"CaBr&#x2082;",fr:"CaBr2",n:"calcium bromide",t:"ionic"},
+  {f:"Li&#x2082;O",fr:"Li2O",n:"lithium oxide",t:"ionic"},
+  {f:"AlCl&#x2083;",fr:"AlCl3",n:"aluminum chloride",t:"ionic"},
+  {f:"Mg&#x2083;N&#x2082;",fr:"Mg3N2",n:"magnesium nitride",t:"ionic"},
+  {f:"BaF&#x2082;",fr:"BaF2",n:"barium fluoride",t:"ionic"},
+  {f:"Sr&#x2083;N&#x2082;",fr:"Sr3N2",n:"strontium nitride",t:"ionic"},
+  {f:"Rb&#x2083;P",fr:"Rb3P",n:"rubidium phosphide",t:"ionic"},
+  {f:"Li&#x2083;N",fr:"Li3N",n:"lithium nitride",t:"ionic"},
+  {f:"CaO",fr:"CaO",n:"calcium oxide",t:"ionic"},
+  {f:"KI",fr:"KI",n:"potassium iodide",t:"ionic"},
+  {f:"SrS",fr:"SrS",n:"strontium sulfide",t:"ionic"},
+  {f:"AlBr&#x2083;",fr:"AlBr3",n:"aluminum bromide",t:"ionic"},
+  {f:"Na&#x2082;O",fr:"Na2O",n:"sodium oxide",t:"ionic"},
+  {f:"BeCl&#x2082;",fr:"BeCl2",n:"beryllium chloride",t:"ionic"},
+  {f:"CsCl",fr:"CsCl",n:"cesium chloride",t:"ionic"},
+  {f:"MgS",fr:"MgS",n:"magnesium sulfide",t:"ionic"},
+  {f:"BaBr&#x2082;",fr:"BaBr2",n:"barium bromide",t:"ionic"},
+  {f:"MnO",fr:"MnO",n:"manganese(II) oxide",t:"ionic"},
+  {f:"FeO",fr:"FeO",n:"iron(II) oxide",t:"ionic"},
+  {f:"Fe&#x2082;O&#x2083;",fr:"Fe2O3",n:"iron(III) oxide",t:"ionic"},
+  {f:"CuCl",fr:"CuCl",n:"copper(I) chloride",t:"ionic"},
+  {f:"CuCl&#x2082;",fr:"CuCl2",n:"copper(II) chloride",t:"ionic"},
+  {f:"SnS",fr:"SnS",n:"tin(II) sulfide",t:"ionic"},
+  {f:"PbO&#x2082;",fr:"PbO2",n:"lead(IV) oxide",t:"ionic"},
+  {f:"MnF&#x2084;",fr:"MnF4",n:"manganese(IV) fluoride",t:"ionic"},
+  {f:"Ni&#x2083;P&#x2082;",fr:"Ni3P2",n:"nickel(II) phosphide",t:"ionic"},
+  {f:"PbCl&#x2082;",fr:"PbCl2",n:"lead(II) chloride",t:"ionic"},
+  {f:"MoO&#x2082;",fr:"MoO2",n:"molybdenum(IV) oxide",t:"ionic"},
+  {f:"V&#x2082;O&#x2085;",fr:"V2O5",n:"vanadium(V) oxide",t:"ionic"},
+  {f:"SnO",fr:"SnO",n:"tin(II) oxide",t:"ionic"},
+  {f:"Ag&#x2082;S",fr:"Ag2S",n:"silver sulfide",t:"ionic"},
+  {f:"CuS",fr:"CuS",n:"copper(II) sulfide",t:"ionic"},
+  {f:"Cr&#x2082;O&#x2083;",fr:"Cr2O3",n:"chromium(III) oxide",t:"ionic"},
+  {f:"MnO&#x2082;",fr:"MnO2",n:"manganese(IV) oxide",t:"ionic"},
+  {f:"Fe&#x2082;S&#x2083;",fr:"Fe2S3",n:"iron(III) sulfide",t:"ionic"},
+  {f:"NiBr&#x2082;",fr:"NiBr2",n:"nickel(II) bromide",t:"ionic"},
+  {f:"ZnS",fr:"ZnS",n:"zinc sulfide",t:"ionic"},
+  {f:"CoO",fr:"CoO",n:"cobalt(II) oxide",t:"ionic"},
+  {f:"TiO&#x2082;",fr:"TiO2",n:"titanium(IV) oxide",t:"ionic"},
+  {f:"PbS",fr:"PbS",n:"lead(II) sulfide",t:"ionic"}
 ];
 var CQ=[
-  {f:'CO&#x2082;',fr:'CO2',n:'carbon dioxide',t:'cov'},
-  {f:'N&#x2082;O&#x2085;',fr:'N2O5',n:'dinitrogen pentoxide',t:'cov'},
-  {f:'PCl&#x2083;',fr:'PCl3',n:'phosphorus trichloride',t:'cov'},
-  {f:'BF&#x2083;',fr:'BF3',n:'boron trifluoride',t:'cov'},
-  {f:'SO&#x2082;',fr:'SO2',n:'sulfur dioxide',t:'cov'},
-  {f:'NO',fr:'NO',n:'nitrogen monoxide',t:'cov'},
-  {f:'CCl&#x2084;',fr:'CCl4',n:'carbon tetrachloride',t:'cov'},
-  {f:'N&#x2082;O',fr:'N2O',n:'dinitrogen monoxide',t:'cov'},
-  {f:'SF&#x2086;',fr:'SF6',n:'sulfur hexafluoride',t:'cov'},
-  {f:'P&#x2082;O&#x2085;',fr:'P2O5',n:'diphosphorus pentoxide',t:'cov'},
-  {f:'NF&#x2083;',fr:'NF3',n:'nitrogen trifluoride',t:'cov'},
-  {f:'IF&#x2085;',fr:'IF5',n:'iodine pentafluoride',t:'cov'},
-  {f:'N&#x2082;O&#x2083;',fr:'N2O3',n:'dinitrogen trioxide',t:'cov'},
-  {f:'P&#x2084;S&#x2085;',fr:'P4S5',n:'tetraphosphorus pentasulfide',t:'cov'},
-  {f:'P&#x2084;O&#x2081;&#x2080;',fr:'P4O10',n:'tetraphosphorus decoxide',t:'cov'},
-  {f:'CO',fr:'CO',n:'carbon monoxide',t:'cov'},
-  {f:'H&#x2082;O',fr:'H2O',n:'dihydrogen monoxide',t:'cov'},
-  {f:'CS&#x2082;',fr:'CS2',n:'carbon disulfide',t:'cov'},
-  {f:'N&#x2082;S&#x2084;',fr:'N2S4',n:'dinitrogen tetrasulfide',t:'cov'},
-  {f:'N&#x2082;O&#x2084;',fr:'N2O4',n:'dinitrogen tetroxide',t:'cov'},
-  {f:'ClO&#x2082;',fr:'ClO2',n:'chlorine dioxide',t:'cov'},
-  {f:'PCl&#x2085;',fr:'PCl5',n:'phosphorus pentachloride',t:'cov'},
-  {f:'SiCl&#x2084;',fr:'SiCl4',n:'silicon tetrachloride',t:'cov'},
-  {f:'OF&#x2082;',fr:'OF2',n:'oxygen difluoride',t:'cov'},
-  {f:'BrF&#x2083;',fr:'BrF3',n:'bromine trifluoride',t:'cov'},
-  {f:'S&#x2082;Cl&#x2086;',fr:'S2Cl6',n:'disulfur hexachloride',t:'cov'},
-  {f:'N&#x2082;F&#x2084;',fr:'N2F4',n:'dinitrogen tetrafluoride',t:'cov'}
+  {f:"CO&#x2082;",fr:"CO2",n:"carbon dioxide",t:"cov"},
+  {f:"N&#x2082;O&#x2085;",fr:"N2O5",n:"dinitrogen pentoxide",t:"cov"},
+  {f:"PCl&#x2083;",fr:"PCl3",n:"phosphorus trichloride",t:"cov"},
+  {f:"BF&#x2083;",fr:"BF3",n:"boron trifluoride",t:"cov"},
+  {f:"SO&#x2082;",fr:"SO2",n:"sulfur dioxide",t:"cov"},
+  {f:"NO",fr:"NO",n:"nitrogen monoxide",t:"cov"},
+  {f:"CCl&#x2084;",fr:"CCl4",n:"carbon tetrachloride",t:"cov"},
+  {f:"N&#x2082;O",fr:"N2O",n:"dinitrogen monoxide",t:"cov"},
+  {f:"SF&#x2086;",fr:"SF6",n:"sulfur hexafluoride",t:"cov"},
+  {f:"P&#x2082;O&#x2085;",fr:"P2O5",n:"diphosphorus pentoxide",t:"cov"},
+  {f:"NF&#x2083;",fr:"NF3",n:"nitrogen trifluoride",t:"cov"},
+  {f:"IF&#x2085;",fr:"IF5",n:"iodine pentafluoride",t:"cov"},
+  {f:"N&#x2082;O&#x2083;",fr:"N2O3",n:"dinitrogen trioxide",t:"cov"},
+  {f:"P&#x2084;S&#x2085;",fr:"P4S5",n:"tetraphosphorus pentasulfide",t:"cov"},
+  {f:"P&#x2084;O&#x2081;&#x2080;",fr:"P4O10",n:"tetraphosphorus decoxide",t:"cov"},
+  {f:"CO",fr:"CO",n:"carbon monoxide",t:"cov"},
+  {f:"H&#x2082;O",fr:"H2O",n:"dihydrogen monoxide",t:"cov"},
+  {f:"CS&#x2082;",fr:"CS2",n:"carbon disulfide",t:"cov"},
+  {f:"N&#x2082;S&#x2084;",fr:"N2S4",n:"dinitrogen tetrasulfide",t:"cov"},
+  {f:"N&#x2082;O&#x2084;",fr:"N2O4",n:"dinitrogen tetroxide",t:"cov"},
+  {f:"ClO&#x2082;",fr:"ClO2",n:"chlorine dioxide",t:"cov"},
+  {f:"PCl&#x2085;",fr:"PCl5",n:"phosphorus pentachloride",t:"cov"},
+  {f:"SiCl&#x2084;",fr:"SiCl4",n:"silicon tetrachloride",t:"cov"},
+  {f:"OF&#x2082;",fr:"OF2",n:"oxygen difluoride",t:"cov"},
+  {f:"BrF&#x2083;",fr:"BrF3",n:"bromine trifluoride",t:"cov"},
+  {f:"S&#x2082;Cl&#x2086;",fr:"S2Cl6",n:"disulfur hexachloride",t:"cov"},
+  {f:"N&#x2082;F&#x2084;",fr:"N2F4",n:"dinitrogen tetrafluoride",t:"cov"}
 ];
 var PQ=[
-  {f:'LiNO&#x2083;',fr:'LiNO3',n:'lithium nitrate',t:'poly'},
-  {f:'Al&#x2082;(SO&#x2084;)&#x2083;',fr:'Al2(SO4)3',n:'aluminum sulfate',t:'poly'},
-  {f:'Ba(ClO&#x2083;)&#x2082;',fr:'Ba(ClO3)2',n:'barium chlorate',t:'poly'},
-  {f:'(NH&#x2084;)&#x2082;O',fr:'(NH4)2O',n:'ammonium oxide',t:'poly'},
-  {f:'MgCO&#x2083;',fr:'MgCO3',n:'magnesium carbonate',t:'poly'},
-  {f:'K&#x2082;SO&#x2083;',fr:'K2SO3',n:'potassium sulfite',t:'poly'},
-  {f:'NaClO&#x2082;',fr:'NaClO2',n:'sodium chlorite',t:'poly'},
-  {f:'NH&#x2084;OH',fr:'NH4OH',n:'ammonium hydroxide',t:'poly'},
-  {f:'K&#x2082;SO&#x2084;',fr:'K2SO4',n:'potassium sulfate',t:'poly'},
-  {f:'NaMnO&#x2084;',fr:'NaMnO4',n:'sodium permanganate',t:'poly'},
-  {f:'Mg(NO&#x2083;)&#x2082;',fr:'Mg(NO3)2',n:'magnesium nitrate',t:'poly'},
-  {f:'NaOH',fr:'NaOH',n:'sodium hydroxide',t:'poly'},
-  {f:'CaSO&#x2084;',fr:'CaSO4',n:'calcium sulfate',t:'poly'},
-  {f:'Na&#x2083;PO&#x2084;',fr:'Na3PO4',n:'sodium phosphate',t:'poly'},
-  {f:'(NH&#x2084;)&#x2083;PO&#x2084;',fr:'(NH4)3PO4',n:'ammonium phosphate',t:'poly'},
-  {f:'Ba(NO&#x2082;)&#x2082;',fr:'Ba(NO2)2',n:'barium nitrite',t:'poly'},
-  {f:'(NH&#x2084;)&#x2082;SO&#x2084;',fr:'(NH4)2SO4',n:'ammonium sulfate',t:'poly'},
-  {f:'Al&#x2082;(CO&#x2083;)&#x2083;',fr:'Al2(CO3)3',n:'aluminum carbonate',t:'poly'},
-  {f:'Fe(OH)&#x2083;',fr:'Fe(OH)3',n:'iron(III) hydroxide',t:'poly'},
-  {f:'KNO&#x2083;',fr:'KNO3',n:'potassium nitrate',t:'poly'},
-  {f:'Fe(NO&#x2083;)&#x2083;',fr:'Fe(NO3)3',n:'iron(III) nitrate',t:'poly'},
-  {f:'K&#x2082;Cr&#x2082;O&#x2087;',fr:'K2Cr2O7',n:'potassium dichromate',t:'poly'},
-  {f:'BaSO&#x2084;',fr:'BaSO4',n:'barium sulfate',t:'poly'},
-  {f:'CaCO&#x2083;',fr:'CaCO3',n:'calcium carbonate',t:'poly'},
-  {f:'Mg(OH)&#x2082;',fr:'Mg(OH)2',n:'magnesium hydroxide',t:'poly'},
-  {f:'NH&#x2084;Cl',fr:'NH4Cl',n:'ammonium chloride',t:'poly'},
-  {f:'K&#x2082;CrO&#x2084;',fr:'K2CrO4',n:'potassium chromate',t:'poly'},
-  {f:'Cu(NO&#x2083;)&#x2082;',fr:'Cu(NO3)2',n:'copper(II) nitrate',t:'poly'},
-  {f:'CuCO&#x2083;',fr:'CuCO3',n:'copper(II) carbonate',t:'poly'},
-  {f:'Ca(OH)&#x2082;',fr:'Ca(OH)2',n:'calcium hydroxide',t:'poly'},
-  {f:'KOH',fr:'KOH',n:'potassium hydroxide',t:'poly'},
-  {f:'Na&#x2082;CO&#x2083;',fr:'Na2CO3',n:'sodium carbonate',t:'poly'},
-  {f:'Ca&#x2083;(PO&#x2084;)&#x2082;',fr:'Ca3(PO4)2',n:'calcium phosphate',t:'poly'},
-  {f:'Fe&#x2082;(SO&#x2084;)&#x2083;',fr:'Fe2(SO4)3',n:'iron(III) sulfate',t:'poly'},
-  {f:'Zn(NO&#x2083;)&#x2082;',fr:'Zn(NO3)2',n:'zinc nitrate',t:'poly'},
-  {f:'NaHCO&#x2083;',fr:'NaHCO3',n:'sodium bicarbonate',t:'poly'},
-  {f:'NH&#x2084;NO&#x2083;',fr:'NH4NO3',n:'ammonium nitrate',t:'poly'},
-  {f:'Mg(C&#x2082;H&#x2083;O&#x2082;)&#x2082;',fr:'Mg(C2H3O2)2',n:'magnesium acetate',t:'poly'}
+  {f:"LiNO&#x2083;",fr:"LiNO3",n:"lithium nitrate",t:"poly"},
+  {f:"Al&#x2082;(SO&#x2084;)&#x2083;",fr:"Al2(SO4)3",n:"aluminum sulfate",t:"poly"},
+  {f:"Ba(ClO&#x2083;)&#x2082;",fr:"Ba(ClO3)2",n:"barium chlorate",t:"poly"},
+  {f:"(NH&#x2084;)&#x2082;O",fr:"(NH4)2O",n:"ammonium oxide",t:"poly"},
+  {f:"MgCO&#x2083;",fr:"MgCO3",n:"magnesium carbonate",t:"poly"},
+  {f:"K&#x2082;SO&#x2083;",fr:"K2SO3",n:"potassium sulfite",t:"poly"},
+  {f:"NaClO&#x2082;",fr:"NaClO2",n:"sodium chlorite",t:"poly"},
+  {f:"NH&#x2084;OH",fr:"NH4OH",n:"ammonium hydroxide",t:"poly"},
+  {f:"K&#x2082;SO&#x2084;",fr:"K2SO4",n:"potassium sulfate",t:"poly"},
+  {f:"NaMnO&#x2084;",fr:"NaMnO4",n:"sodium permanganate",t:"poly"},
+  {f:"Mg(NO&#x2083;)&#x2082;",fr:"Mg(NO3)2",n:"magnesium nitrate",t:"poly"},
+  {f:"NaOH",fr:"NaOH",n:"sodium hydroxide",t:"poly"},
+  {f:"CaSO&#x2084;",fr:"CaSO4",n:"calcium sulfate",t:"poly"},
+  {f:"Na&#x2083;PO&#x2084;",fr:"Na3PO4",n:"sodium phosphate",t:"poly"},
+  {f:"(NH&#x2084;)&#x2083;PO&#x2084;",fr:"(NH4)3PO4",n:"ammonium phosphate",t:"poly"},
+  {f:"Ba(NO&#x2082;)&#x2082;",fr:"Ba(NO2)2",n:"barium nitrite",t:"poly"},
+  {f:"(NH&#x2084;)&#x2082;SO&#x2084;",fr:"(NH4)2SO4",n:"ammonium sulfate",t:"poly"},
+  {f:"Al&#x2082;(CO&#x2083;)&#x2083;",fr:"Al2(CO3)3",n:"aluminum carbonate",t:"poly"},
+  {f:"Fe(OH)&#x2083;",fr:"Fe(OH)3",n:"iron(III) hydroxide",t:"poly"},
+  {f:"KNO&#x2083;",fr:"KNO3",n:"potassium nitrate",t:"poly"},
+  {f:"Fe(NO&#x2083;)&#x2083;",fr:"Fe(NO3)3",n:"iron(III) nitrate",t:"poly"},
+  {f:"K&#x2082;Cr&#x2082;O&#x2087;",fr:"K2Cr2O7",n:"potassium dichromate",t:"poly"},
+  {f:"BaSO&#x2084;",fr:"BaSO4",n:"barium sulfate",t:"poly"},
+  {f:"CaCO&#x2083;",fr:"CaCO3",n:"calcium carbonate",t:"poly"},
+  {f:"Mg(OH)&#x2082;",fr:"Mg(OH)2",n:"magnesium hydroxide",t:"poly"},
+  {f:"NH&#x2084;Cl",fr:"NH4Cl",n:"ammonium chloride",t:"poly"},
+  {f:"K&#x2082;CrO&#x2084;",fr:"K2CrO4",n:"potassium chromate",t:"poly"},
+  {f:"Cu(NO&#x2083;)&#x2082;",fr:"Cu(NO3)2",n:"copper(II) nitrate",t:"poly"},
+  {f:"CuCO&#x2083;",fr:"CuCO3",n:"copper(II) carbonate",t:"poly"},
+  {f:"Ca(OH)&#x2082;",fr:"Ca(OH)2",n:"calcium hydroxide",t:"poly"},
+  {f:"KOH",fr:"KOH",n:"potassium hydroxide",t:"poly"},
+  {f:"Na&#x2082;CO&#x2083;",fr:"Na2CO3",n:"sodium carbonate",t:"poly"},
+  {f:"Ca&#x2083;(PO&#x2084;)&#x2082;",fr:"Ca3(PO4)2",n:"calcium phosphate",t:"poly"},
+  {f:"Fe&#x2082;(SO&#x2084;)&#x2083;",fr:"Fe2(SO4)3",n:"iron(III) sulfate",t:"poly"},
+  {f:"Zn(NO&#x2083;)&#x2082;",fr:"Zn(NO3)2",n:"zinc nitrate",t:"poly"},
+  {f:"NaHCO&#x2083;",fr:"NaHCO3",n:"sodium hydrogen carbonate",t:"poly"},
+  {f:"NH&#x2084;NO&#x2083;",fr:"NH4NO3",n:"ammonium nitrate",t:"poly"},
+  {f:"Mg(C&#x2082;H&#x2083;O&#x2082;)&#x2082;",fr:"Mg(C2H3O2)2",n:"magnesium acetate",t:"poly"}
 ];
 var ALL=IQ.concat(CQ).concat(PQ);
-
-// ── STATE ──────────────────────────────────────────────────────────────────────
-var mode='learn', cat='all', correct=0, streak=0, fcIdx=0;
+var mode="learn", cat="all", correct=0, streak=0, fcIdx=0;
 var curQ=null, curPI=null;
 var quizQs=[], quizAnswers=[], quizSubmitted=false, quizResults=null;
 var learnDone={};
-
-// ── UTILS ──────────────────────────────────────────────────────────────────────
-function shuf(a) {
-  var b=a.slice();
-  for(var i=b.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=b[i];b[i]=b[j];b[j]=t;}
-  return b;
-}
-function getPool() {
-  if(cat==='ionic') return shuf(IQ);
-  if(cat==='cov') return shuf(CQ);
-  if(cat==='poly') return shuf(PQ);
-  return shuf(ALL);
-}
-function norm(s) {
-  return s.toLowerCase().replace(/\s+/g,' ').trim()
-    .replace(/[₀₁₂₃₄₅₆₇₈₉]/g,function(m){return '0123456789'['₀₁₂₃₄₅₆₇₈₉'.indexOf(m)];})
-    .replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g,function(m){return '0123456789'['⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(m)];})
-    .replace(/[+⁺]/g,'+').replace(/[-⁻]/g,'-').replace(/[()]/g,'');
-}
-function chk(u,c){return norm(u)===norm(c);}
-function bdg(t){
-  var cls={ionic:'bi',cov:'bc',poly:'bp'};
-  var lbl={ionic:'Binary ionic',cov:'Binary covalent',poly:'Polyatomic'};
-  return '<span class="bdg '+(cls[t]||'bp')+'">'+(lbl[t]||t)+'</span>';
-}
-function ins(id,ch){
-  var el=document.getElementById(id);
-  if(!el)return;
-  var p=el.selectionStart!==undefined?el.selectionStart:el.value.length;
-  var e=el.selectionEnd!==undefined?el.selectionEnd:p;
-  el.value=el.value.slice(0,p)+ch+el.value.slice(e);
-  el.selectionStart=el.selectionEnd=p+ch.length;
-  el.focus();
-}
-var SRAW=['₀','₁','₂','₃','₄','₅','₆','₇','₈','₉','⁺','⁻','¹','²','³'];
-var SDSP=['&#x2080;','&#x2081;','&#x2082;','&#x2083;','&#x2084;','&#x2085;','&#x2086;','&#x2087;','&#x2088;','&#x2089;','&#x207A;','&#x207B;','&#xB9;','&#xB2;','&#xB3;'];
-function stb(id){
-  var h='<div class="stb">';
-  for(var i=0;i<SRAW.length;i++){
-    h+='<button class="sbtn" type="button" onclick="ins(\''+id+'\',\''+SRAW[i]+'\')" >'+SDSP[i]+'</button>';
-  }
-  return h+'</div>';
-}
-function updS(){
-  document.getElementById('sc').textContent=correct;
-  document.getElementById('ss').textContent=streak;
-}
 function g(id){return document.getElementById(id);}
-
-// ── NAVIGATION ────────────────────────────────────────────────────────────────
-function setMode(m) {
+function shuf(a){var b=a.slice();for(var i=b.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=b[i];b[i]=b[j];b[j]=t;}return b;}
+function getPool(){if(cat==="ionic")return shuf(IQ);if(cat==="cov")return shuf(CQ);if(cat==="poly")return shuf(PQ);return shuf(ALL);}
+function norm(s){
+  return s.toLowerCase().replace(/\s+/g," ").trim()
+    .replace(/[\u2080-\u2089]/g,function(m){return String.fromCharCode(m.charCodeAt(0)-8272);})
+    .replace(/[\u00B9\u00B2\u00B3]/g,function(m){return m==="¹"?"1":m==="²"?"2":"3";})
+    .replace(/[\u2070\u2074-\u2079]/g,function(m){var map={"⁰":"0","⁴":"4","⁵":"5","⁶":"6","⁷":"7","⁸":"8","⁹":"9"};return map[m]||m;})
+    .replace(/\u207A/g,"+").replace(/\u207B/g,"-")
+    .replace(/[()]/g,"");
+}
+function chk(u,c){
+  var un=norm(u), cn=norm(c);
+  if(un===cn) return true;
+  if(cn==="1-"&&un==="-") return true;
+  if(cn==="1+"&&un==="+") return true;
+  return false;
+}
+function updS(){g("sc").textContent=correct;g("ss").textContent=streak;}
+function bdg(t){var m={ionic:"bi",cov:"bc",poly:"bp"};var l={ionic:"Binary ionic",cov:"Binary covalent",poly:"Polyatomic"};return "<span class=\"bdg "+(m[t]||"bp")+"\">"+( l[t]||t)+"</span>";}
+var SRAW=["\u2080","\u2081","\u2082","\u2083","\u2084","\u2085","\u2086","\u2087","\u2088","\u2089","\u207A","\u207B","\u00B9","\u00B2","\u00B3"];
+var SDSP=["&#x2080;","&#x2081;","&#x2082;","&#x2083;","&#x2084;","&#x2085;","&#x2086;","&#x2087;","&#x2088;","&#x2089;","&#x207A;","&#x207B;","&#xB9;","&#xB2;","&#xB3;"];
+function ins(id,ch){var el=g(id);if(!el)return;var p=el.selectionStart!==undefined?el.selectionStart:el.value.length;var e2=el.selectionEnd!==undefined?el.selectionEnd:p;el.value=el.value.slice(0,p)+ch+el.value.slice(e2);el.selectionStart=el.selectionEnd=p+ch.length;el.focus();}
+function stb(id){var h="<div class=\"stb\">";for(var i=0;i<SRAW.length;i++){h+="<button class=\"sbtn\" type=\"button\" onclick=\"ins('"+id+"','"+SRAW[i]+"')\">"+SDSP[i]+"</button>";}return h+"</div>";}
+function setMode(m){
   mode=m;
-  var btns=document.querySelectorAll('.sb-btn[data-m]');
-  for(var i=0;i<btns.length;i++){
-    btns[i].classList.toggle('active', btns[i].getAttribute('data-m')===m);
-  }
-  var sb=document.getElementById('sidebar');
-  if(sb) sb.classList.remove('open');
+  var btns=document.querySelectorAll(".sb-btn[data-m]");
+  for(var i=0;i<btns.length;i++) btns[i].classList.toggle("active",btns[i].getAttribute("data-m")===m);
+  var sb=g("sidebar"); if(sb) sb.classList.remove("open");
   render();
 }
-function render() {
-  var a=g('main');
-  if(mode==='learn') rLearn(a);
-  else if(mode==='ftn') rFTN(a);
-  else if(mode==='ntf') rNTF(a);
-  else if(mode==='poly') rPoly(a);
-  else if(mode==='ioc') rIOC(a);
-  else if(mode==='mcq') rMCQ(a);
-  else if(mode==='fc') rFC(a);
-  else if(mode==='quiz') rQuiz(a);
-  else if(mode==='polytable') rPT(a);
-  else if(mode==='ref') rRef(a);
+function render(){
+  var a=g("main");
+  if(mode==="learn") rLearn(a);
+  else if(mode==="ftn") rFTN(a);
+  else if(mode==="ntf") rNTF(a);
+  else if(mode==="poly") rPoly(a);
+  else if(mode==="ioc") rIOC(a);
+  else if(mode==="mcq") rMCQ(a);
+  else if(mode==="fc") rFC(a);
+  else if(mode==="shuffle") rShuffle(a);
+  else if(mode==="quiz") rQuiz(a);
+  else if(mode==="polytable") rPT(a);
+  else if(mode==="ref") rRef(a);
 }
-function catBar() {
-  return '<div class="catrow">'
-    +'<button class="cbtn ca'+(cat==='all'?' active':'')+'" onclick="setCat(\'all\')"><span class="dot da"></span>All</button>'
-    +'<button class="cbtn ci'+(cat==='ionic'?' active':'')+'" onclick="setCat(\'ionic\')"><span class="dot di"></span>Binary ionic</button>'
-    +'<button class="cbtn cc'+(cat==='cov'?' active':'')+'" onclick="setCat(\'cov\')"><span class="dot dc"></span>Covalent</button>'
-    +'<button class="cbtn cp'+(cat==='poly'?' active':'')+'" onclick="setCat(\'poly\')"><span class="dot dp"></span>Polyatomic</button>'
-    +'</div>';
+function catBar(){
+  return "<div class=\"catrow\">"
+    +"<button class=\"cbtn ca"+(cat==="all"?" active":"")+"\" onclick=\"setCat('all')\"><span class=\"dot da\"></span>All</button>"
+    +"<button class=\"cbtn ci"+(cat==="ionic"?" active":"")+"\" onclick=\"setCat('ionic')\"><span class=\"dot di\"></span>Binary ionic</button>"
+    +"<button class=\"cbtn cc"+(cat==="cov"?" active":"")+"\" onclick=\"setCat('cov')\"><span class=\"dot dc\"></span>Covalent</button>"
+    +"<button class=\"cbtn cp"+(cat==="poly"?" active":"")+"\" onclick=\"setCat('poly')\"><span class=\"dot dp\"></span>Polyatomic</button>"
+    +"</div>";
 }
 function setCat(c){cat=c;render();}
-
-// ── FORMULA TO NAME ───────────────────────────────────────────────────────────
-function rFTN(a) {
-  var pool=getPool(); curQ=pool[0];
-  var h='<div class="ph"><h1>Formula &rarr; Name</h1><p>Look at the formula and write the compound name.</p></div>';
-  h+=catBar();
-  h+='<div class="card">'+bdg(curQ.t);
-  h+='<div class="qlbl" style="margin-top:6px">Write the name</div>';
-  h+='<div class="cdsp">'+curQ.f+'</div>';
-  h+='<div class="hint">For transition metals include the Roman numeral, e.g. <em>iron(III) oxide</em>.</div>';
-  h+='<input class="ti" id="fI" placeholder="e.g. calcium chloride" onkeydown="if(event.key===\'Enter\')sFTN()"/>';
-  h+='<div class="brow"><button class="btn pri" onclick="sFTN()">Check &#x23CE;</button><button class="btn" onclick="rFTN(g(\'main\'))">Skip</button></div>';
-  h+='<div id="fR"></div></div>';
-  a.innerHTML=h;
-  setTimeout(function(){var e=g('fI');if(e)e.focus();},30);
+function focus(id){setTimeout(function(){var e=g(id);if(e)e.focus();},30);}
+function okRes(nextFn){return "<div class=\"rs ok\">&#x2713; Correct!</div><script>setTimeout(function(){"+nextFn+"},1300);<\/script>";}
+function showRes(el, ok, ansHtml, nextFn){
+  el.disabled=true;
+  var r=g(el.id.replace(/[A-Z].*/,"")+"R")||g("fR")||g("nR")||g("pR")||g("iR")||g("mR")||g("sR");
+  var resDiv=el.parentElement.parentElement.querySelector("[id$=\"R\"]");
+  if(!resDiv) resDiv=el.closest(".card").querySelector("[id$=\"R\"]");
+  if(ok){
+    resDiv.innerHTML="<div class=\"rs ok\">&#x2713; Correct!</div>";
+    setTimeout(nextFn,1300);
+  } else {
+    resDiv.innerHTML="<div class=\"rs bad\">&#x2717; Answer: "+ansHtml+"</div>";
+    var btn=el.closest(".card").querySelector(".btn.pri");
+    btn.textContent="Next \u2192"; btn.onclick=nextFn;
+  }
 }
-function sFTN() {
-  var e=g('fI'); if(!e||!e.value.trim()) return;
+function rFTN(a){
+  var pool=getPool(); curQ=pool[0];
+  var h="<div class=\"ph\"><h1>Formula &rarr; Name</h1><p>Write the compound name from the formula.</p></div>"+catBar();
+  h+="<div class=\"card\">"+bdg(curQ.t)+"<div class=\"qlbl\" style=\"margin-top:6px\">Write the name</div>";
+  h+="<div class=\"cdsp\">"+curQ.f+"</div>";
+  h+="<div class=\"hint\">For transition metals include the Roman numeral e.g. <em>iron(III) oxide</em>.</div>";
+  h+="<input class=\"ti\" id=\"fI\" placeholder=\"e.g. calcium chloride\"/>";
+  h+="<div class=\"brow\"><button class=\"btn pri\" onclick=\"sFTN()\">Check &#x23CE;</button><button class=\"btn\" onclick=\"rFTN(g('main'))\">Skip</button></div>";
+  h+="<div id=\"fR\"></div></div>";
+  a.innerHTML=h;
+  g("fI").addEventListener("keydown",function(e){if(e.key==="Enter")sFTN();});
+  focus("fI");
+}
+function sFTN(){
+  var e=g("fI"); if(!e||!e.value.trim()) return;
   var ok=chk(e.value.trim(),curQ.n);
-  if(ok){correct++;streak++;}else streak=0;
-  updS(); e.disabled=true;
-  var r=g('fR');
-  if(ok){
-    r.innerHTML='<div class="rs ok">&#x2713; Correct!</div>';
-    setTimeout(function(){rFTN(g('main'));},1300);
-  } else {
-    var exp='';
-    if(curQ.t==='cov') exp='Covalent compounds use prefixes (di-, tri-, etc.) and the second element ends in -ide.';
-    else if(/\(I{1,3}V?\)/.test(curQ.n)) exp='Transition metal: find the charge from the formula, then add the Roman numeral in parentheses.';
-    else if(curQ.t==='poly') exp='Identify the polyatomic ion(s) and use their memorized names.';
-    r.innerHTML='<div class="rs bad">&#x2717; Answer: <strong>'+curQ.n+'</strong>'+(exp?'<br><span style="font-size:12px">'+exp+'</span>':'')+'</div>';
-    var btn=a.querySelector('.btn.pri');
-    btn.textContent='Next \u2192'; btn.onclick=function(){rFTN(g('main'));};
+  if(ok){correct++;streak++;}else streak=0; updS(); e.disabled=true;
+  var r=g("fR");
+  var exp="";
+  if(!ok){
+    if(curQ.t==="cov") exp="<br><span style=\"font-size:12px\">Covalent: use prefixes + -ide ending.</span>";
+    else if(/\(I{1,3}V?\)/.test(curQ.n)) exp="<br><span style=\"font-size:12px\">Transition metal: calculate charge from formula, then add Roman numeral.</span>";
+    else if(curQ.t==="poly") exp="<br><span style=\"font-size:12px\">Identify the polyatomic ion and use its memorized name.</span>";
   }
+  if(ok){r.innerHTML="<div class=\"rs ok\">&#x2713; Correct!</div>";setTimeout(function(){rFTN(g("main"));},1300);}
+  else{r.innerHTML="<div class=\"rs bad\">&#x2717; Answer: <strong>"+curQ.n+"</strong>"+exp+"</div>";var btn=g("main").querySelector(".btn.pri");btn.textContent="Next \u2192";btn.onclick=function(){rFTN(g("main"));};}
 }
-
-// ── NAME TO FORMULA ───────────────────────────────────────────────────────────
-function rNTF(a) {
+function rNTF(a){
   var pool=getPool(); curQ=pool[0];
-  var h='<div class="ph"><h1>Name &rarr; Formula</h1><p>Read the name and write the chemical formula.</p></div>';
-  h+=catBar();
-  h+='<div class="card">'+bdg(curQ.t);
-  h+='<div class="qlbl" style="margin-top:6px">Write the formula</div>';
-  h+='<div class="ndsp">'+curQ.n+'</div>';
-  h+='<div class="hint">Balance charges so the compound is neutral. Use parentheses around polyatomic ions when more than one is needed.</div>';
-  h+=stb('nI');
-  h+='<input class="ci" id="nI" placeholder="e.g. CaCl&#x2082;" onkeydown="if(event.key===\'Enter\')sNTF()"/>';
-  h+='<div class="brow"><button class="btn pri" onclick="sNTF()">Check &#x23CE;</button><button class="btn" onclick="rNTF(g(\'main\'))">Skip</button></div>';
-  h+='<div id="nR"></div></div>';
+  var h="<div class=\"ph\"><h1>Name &rarr; Formula</h1><p>Write the formula from the compound name.</p></div>"+catBar();
+  h+="<div class=\"card\">"+bdg(curQ.t)+"<div class=\"qlbl\" style=\"margin-top:6px\">Write the formula</div>";
+  h+="<div class=\"ndsp\">"+curQ.n+"</div>";
+  h+="<div class=\"hint\">Balance charges to zero. Use parentheses when more than one polyatomic ion is needed.</div>";
+  h+=stb("nI");
+  h+="<input class=\"ci\" id=\"nI\" placeholder=\"e.g. CaCl&#x2082;\"/>";
+  h+="<div class=\"brow\"><button class=\"btn pri\" onclick=\"sNTF()\">Check &#x23CE;</button><button class=\"btn\" onclick=\"rNTF(g('main'))\">Skip</button></div>";
+  h+="<div id=\"nR\"></div></div>";
   a.innerHTML=h;
-  setTimeout(function(){var e=g('nI');if(e)e.focus();},30);
+  g("nI").addEventListener("keydown",function(e){if(e.key==="Enter")sNTF();});
+  focus("nI");
 }
-function sNTF() {
-  var e=g('nI'); if(!e||!e.value.trim()) return;
+function sNTF(){
+  var e=g("nI"); if(!e||!e.value.trim()) return;
   var ok=chk(e.value.trim(),curQ.fr);
-  if(ok){correct++;streak++;}else streak=0;
-  updS(); e.disabled=true;
-  var r=g('nR');
-  var tip=curQ.t==='cov'?'For covalent, the prefix directly gives the subscript number.':'Use crisscross method: swap the charge magnitudes as subscripts, then simplify.';
-  if(ok){
-    r.innerHTML='<div class="rs ok">&#x2713; Correct!</div>';
-    setTimeout(function(){rNTF(g('main'));},1300);
-  } else {
-    r.innerHTML='<div class="rs bad">&#x2717; Answer: <strong>'+curQ.f+'</strong><br><span style="font-size:12px">'+tip+'</span></div>';
-    var btn=a.querySelector('.btn.pri');
-    btn.textContent='Next \u2192'; btn.onclick=function(){rNTF(g('main'));};
-  }
+  if(ok){correct++;streak++;}else streak=0; updS(); e.disabled=true;
+  var r=g("nR");
+  var tip=curQ.t==="cov"?"Prefix gives subscript directly.":"Crisscross method: swap charge magnitudes as subscripts.";
+  if(ok){r.innerHTML="<div class=\"rs ok\">&#x2713; Correct!</div>";setTimeout(function(){rNTF(g("main"));},1300);}
+  else{r.innerHTML="<div class=\"rs bad\">&#x2717; Answer: <strong>"+curQ.f+"</strong><br><span style=\"font-size:12px\">"+tip+"</span></div>";var btn=g("main").querySelector(".btn.pri");btn.textContent="Next \u2192";btn.onclick=function(){rNTF(g("main"));};}
 }
-
-// ── POLYATOMIC RECALL ─────────────────────────────────────────────────────────
-function rPoly(a) {
+function rPoly(a){
   var ions=shuf(PI); curPI=ions[0];
   var r3=Math.random();
-  var h='<div class="ph"><h1>Polyatomic Recall</h1></div><div class="card"><span class="bdg bp">Polyatomic ion</span>';
-  if(r3<0.33) {
-    h+='<div class="qlbl" style="margin-top:6px">Formula + charge for this ion</div>';
-    h+='<div class="ndsp">'+curPI.n+'</div>';
-    h+='<div class="hint">Write formula AND charge, e.g. <em>NO&#x2083;1-</em></div>';
-    h+=stb('pI');
-    h+='<input class="ci" id="pI" placeholder="formula + charge" onkeydown="if(event.key===\'Enter\')sPF()"/>';
-    h+='<div class="brow"><button class="btn pri" onclick="sPF()">Check &#x23CE;</button><button class="btn" onclick="rPoly(g(\'main\'))">Skip</button></div>';
-  } else if(r3<0.66) {
-    h+='<div class="qlbl" style="margin-top:6px">Name this ion</div>';
-    h+='<div class="cdsp">'+curPI.f+'<sup style="font-size:.55em">'+curPI.c+'</sup></div>';
-    h+='<input class="ti" id="pI" placeholder="ion name" onkeydown="if(event.key===\'Enter\')sPN()"/>';
-    h+='<div class="brow"><button class="btn pri" onclick="sPN()">Check &#x23CE;</button><button class="btn" onclick="rPoly(g(\'main\'))">Skip</button></div>';
+  var h="<div class=\"ph\"><h1>Polyatomic Recall</h1></div><div class=\"card\"><span class=\"bdg bp\">Polyatomic ion</span>";
+  if(r3<0.33){
+    h+="<div class=\"qlbl\" style=\"margin-top:6px\">Formula + charge for this ion</div>";
+    h+="<div class=\"ndsp\">"+curPI.n+"</div>";
+    h+="<div class=\"hint\">Write formula AND charge, e.g. <em>NO&#x2083;1-</em></div>";
+    h+=stb("pI");
+    h+="<input class=\"ci\" id=\"pI\" placeholder=\"formula + charge\"/>";
+    h+="<div class=\"brow\"><button class=\"btn pri\" onclick=\"sPF()\">Check &#x23CE;</button><button class=\"btn\" onclick=\"rPoly(g('main'))\">Skip</button></div>";
+  } else if(r3<0.66){
+    h+="<div class=\"qlbl\" style=\"margin-top:6px\">Name this ion</div>";
+    h+="<div class=\"cdsp\">"+curPI.f+"<sup style=\"font-size:.55em\">"+curPI.c+"</sup></div>";
+    h+="<input class=\"ti\" id=\"pI\" placeholder=\"ion name\"/>";
+    h+="<div class=\"brow\"><button class=\"btn pri\" onclick=\"sPN()\">Check &#x23CE;</button><button class=\"btn\" onclick=\"rPoly(g('main'))\">Skip</button></div>";
   } else {
-    h+='<div class="qlbl" style="margin-top:6px">What is the charge?</div>';
-    h+='<div class="cdsp">'+curPI.f+'</div>';
-    h+='<div class="hint">Type just the charge, e.g. <em>-</em> or <em>2-</em></div>';
-    h+=stb('pI');
-    h+='<input class="ci" id="pI" placeholder="-, 2-, 3-..." onkeydown="if(event.key===\'Enter\')sPC()"/>';
-    h+='<div class="brow"><button class="btn pri" onclick="sPC()">Check &#x23CE;</button><button class="btn" onclick="rPoly(g(\'main\'))">Skip</button></div>';
+    h+="<div class=\"qlbl\" style=\"margin-top:6px\">What is the charge?</div>";
+    h+="<div class=\"cdsp\">"+curPI.f+"</div>";
+    h+="<div class=\"hint\">Type just the charge, e.g. <em>-</em> or <em>2-</em></div>";
+    h+=stb("pI");
+    h+="<input class=\"ci\" id=\"pI\" placeholder=\"-, 2-, 3-...\"/>";
+    h+="<div class=\"brow\"><button class=\"btn pri\" onclick=\"sPC()\">Check &#x23CE;</button><button class=\"btn\" onclick=\"rPoly(g('main'))\">Skip</button></div>";
   }
-  h+='<div id="pR"></div></div>';
+  h+="<div id=\"pR\"></div></div>";
   a.innerHTML=h;
-  setTimeout(function(){var e=g('pI');if(e)e.focus();},30);
+  g("pI").addEventListener("keydown",function(e){
+    if(e.key==="Enter"){
+      if(r3<0.33) sPF();
+      else if(r3<0.66) sPN();
+      else sPC();
+    }
+  });
+  focus("pI");
 }
-function polyFeedback(ok, ansHtml) {
-  var r=g('pR');
-  if(ok){
-    r.innerHTML='<div class="rs ok">&#x2713; Correct!</div>';
-    setTimeout(function(){rPoly(g('main'));},1300);
-  } else {
-    r.innerHTML='<div class="rs bad">&#x2717; Answer: '+ansHtml+'</div>';
-    var btn=g('main').querySelector('.btn.pri');
-    btn.textContent='Next \u2192'; btn.onclick=function(){rPoly(g('main'));};
-  }
+function polyFB(ok,ansHtml){
+  var r=g("pR");
+  if(ok){r.innerHTML="<div class=\"rs ok\">&#x2713; Correct!</div>";setTimeout(function(){rPoly(g("main"));},1300);}
+  else{r.innerHTML="<div class=\"rs bad\">&#x2717; Answer: "+ansHtml+"</div>";var btn=g("main").querySelector(".btn.pri");btn.textContent="Next \u2192";btn.onclick=function(){rPoly(g("main"));};}
 }
-function sPF() {
-  var e=g('pI'); if(!e||!e.value.trim()) return;
-  var ok=chk(e.value.trim(), curPI.fr+curPI.cr);
-  if(ok){correct++;streak++;}else streak=0; updS(); e.disabled=true;
-  polyFeedback(ok,'<strong>'+curPI.f+'<sup style="font-size:.55em">'+curPI.c+'</sup></strong>');
+function sPF(){var e=g("pI");if(!e||!e.value.trim())return;var ok=chk(e.value.trim(),curPI.fr+curPI.cr);if(ok){correct++;streak++;}else streak=0;updS();e.disabled=true;polyFB(ok,"<strong>"+curPI.f+"<sup style=\"font-size:.55em\">"+curPI.c+"</sup></strong>");}
+function sPN(){var e=g("pI");if(!e||!e.value.trim())return;var ok=chk(e.value.trim(),curPI.n);if(ok){correct++;streak++;}else streak=0;updS();e.disabled=true;polyFB(ok,"<strong>"+curPI.n+"</strong>");}
+function sPC(){
+  var e=g("pI");if(!e||!e.value.trim())return;
+  var input=norm(e.value.trim()), answer=norm(curPI.cr);
+  var ok=input===answer||(answer==="1-"&&input==="-")||(answer==="1+"&&input==="+");
+  if(ok){correct++;streak++;}else streak=0;updS();e.disabled=true;
+  var disp=curPI.cr==="1-"?"-":curPI.cr==="1+"?"+":curPI.cr;
+  polyFB(ok,"charge <strong>"+disp+"</strong>");
 }
-function sPN() {
-  var e=g('pI'); if(!e||!e.value.trim()) return;
-  var ok=chk(e.value.trim(), curPI.n);
-  if(ok){correct++;streak++;}else streak=0; updS(); e.disabled=true;
-  polyFeedback(ok,'<strong>'+curPI.n+'</strong>');
-}
-function sPC() {
-  var e=g('pI'); if(!e||!e.value.trim()) return;
-  var input=norm(e.value.trim());
-  var answer=norm(curPI.cr);
-  var ok=input===answer || (answer==='1-' && input==='-') || (answer==='1+' && input==='+');
-  if(ok){correct++;streak++;}else streak=0; updS(); e.disabled=true;
-  var disp=curPI.cr==='1-'?'-':curPI.cr==='1+'?'+':curPI.cr;
-  polyFeedback(ok,'charge <strong>'+disp+'</strong>');
-}
-
-// ── IONIC OR COVALENT ─────────────────────────────────────────────────────────
-function rIOC(a) {
+function rIOC(a){
   var pool=shuf(IQ.concat(CQ)); curQ=pool[0];
-  var h='<div class="ph"><h1>Ionic or Covalent?</h1><p>Identify the compound type from its formula.</p></div>';
-  h+='<div class="card"><div class="qlbl">Identify the type</div>';
-  h+='<div class="cdsp">'+curQ.f+'</div>';
-  h+='<div class="hint">&#x2022; Ionic = metal + nonmetal &nbsp; &#x2022; Covalent = only nonmetals</div>';
-  h+='<div class="brow"><button class="btn" onclick="sIOC(\'ionic\')">Ionic</button><button class="btn" onclick="sIOC(\'cov\')">Covalent</button></div>';
-  h+='<div id="iR"></div></div>';
+  var h="<div class=\"ph\"><h1>Ionic or Covalent?</h1><p>Identify the compound type.</p></div>";
+  h+="<div class=\"card\"><div class=\"qlbl\">Identify the type</div>";
+  h+="<div class=\"cdsp\">"+curQ.f+"</div>";
+  h+="<div class=\"hint\">&#x2022; Ionic = metal + nonmetal &nbsp; &#x2022; Covalent = only nonmetals</div>";
+  h+="<div class=\"brow\"><button class=\"btn\" onclick=\"sIOC('ionic')\">Ionic</button><button class=\"btn\" onclick=\"sIOC('cov')\">Covalent</button></div>";
+  h+="<div id=\"iR\"></div></div>";
   a.innerHTML=h;
 }
-function sIOC(guess) {
+function sIOC(guess){
   var ok=guess===curQ.t;
-  if(ok){correct++;streak++;}else streak=0; updS();
-  var btns=g('main').querySelectorAll('.btn');
+  if(ok){correct++;streak++;}else streak=0;updS();
+  var btns=g("main").querySelectorAll(".btn");
   for(var i=0;i<btns.length;i++) btns[i].disabled=true;
-  var r=g('iR');
-  var tip=curQ.t==='ionic'?'Look for a metal (left/center of periodic table) bonded to a nonmetal.':'All elements here are nonmetals (right side of periodic table).';
-  if(ok){
-    r.innerHTML='<div class="rs ok">&#x2713; Correct! <strong>'+curQ.f+'</strong> is '+curQ.t+' &mdash; <em>'+curQ.n+'</em></div>';
-    setTimeout(function(){rIOC(g('main'));},2000);
-  } else {
-    r.innerHTML='<div class="rs bad">&#x2717; <strong>'+curQ.f+'</strong> is '+curQ.t+' (<em>'+curQ.n+'</em>)<br><span style="font-size:12px">'+tip+'</span></div>';
-    var nb=document.createElement('button');
-    nb.className='btn pri'; nb.style.marginTop='10px'; nb.textContent='Next \u2192';
-    nb.onclick=function(){rIOC(g('main'));};
-    r.appendChild(nb);
-  }
+  var r=g("iR");
+  var tip=curQ.t==="ionic"?"Look for a metal (left/center of periodic table).":"All elements are nonmetals (right side).";
+  if(ok){r.innerHTML="<div class=\"rs ok\">&#x2713; Correct! <strong>"+curQ.f+"</strong> is "+curQ.t+" &mdash; <em>"+curQ.n+"</em></div>";setTimeout(function(){rIOC(g("main"));},2000);}
+  else{r.innerHTML="<div class=\"rs bad\">&#x2717; <strong>"+curQ.f+"</strong> is "+curQ.t+" (<em>"+curQ.n+"</em>)<br><span style=\"font-size:12px\">"+tip+"</span></div>";var nb=document.createElement("button");nb.className="btn pri";nb.style.marginTop="10px";nb.textContent="Next \u2192";nb.onclick=function(){rIOC(g("main"));};r.appendChild(nb);}
 }
-
-// ── MULTIPLE CHOICE ───────────────────────────────────────────────────────────
-function rMCQ(a) {
+function rMCQ(a){
   var pool=getPool(); curQ=pool[0];
   var fwd=Math.random()<0.5;
   var wrongs=shuf(ALL.filter(function(x){return x!==curQ;})).slice(0,3);
   var opts=shuf([curQ].concat(wrongs));
-  var h='<div class="ph"><h1>Multiple Choice</h1><p>'+(fwd?'Select the correct name.':'Select the correct formula.')+'</p></div>';
-  h+=catBar();
-  h+='<div class="card">'+bdg(curQ.t);
-  h+='<div class="qlbl" style="margin-top:6px">'+(fwd?'Which is the correct name?':'Which is the correct formula?')+'</div>';
-  h+='<div class="'+(fwd?'cdsp':'ndsp')+'">'+(fwd?curQ.f:curQ.n)+'</div>';
-  h+='<div class="mopts">';
+  var h="<div class=\"ph\"><h1>Multiple Choice</h1><p>"+(fwd?"Select the correct name.":"Select the correct formula.")+"</p></div>"+catBar();
+  h+="<div class=\"card\">"+bdg(curQ.t)+"<div class=\"qlbl\" style=\"margin-top:6px\">"+(fwd?"Which is the correct name?":"Which is the correct formula?")+"</div>";
+  h+="<div class=\""+(fwd?"cdsp":"ndsp")+"\">"+(fwd?curQ.f:curQ.n)+"</div><div class=\"mopts\">";
   for(var i=0;i<opts.length;i++){
-    var o=opts[i];
-    var val=fwd?o.n:o.fr;
-    var disp=fwd?o.n:o.f;
-    var correct2=fwd?curQ.n:curQ.fr;
-    h+='<button class="mopt" data-val="'+val.replace(/"/g,'&quot;')+'" data-correct="'+correct2.replace(/"/g,'&quot;')+'" onclick="sMCQ(this)">'+disp+'</button>';
+    var o=opts[i]; var val=fwd?o.n:o.fr; var disp=fwd?o.n:o.f; var cor=fwd?curQ.n:curQ.fr;
+    h+="<button class=\"mopt\" data-val=\""+val.replace(/"/g,"&quot;")+"\" data-cor=\""+cor.replace(/"/g,"&quot;")+"\" onclick=\"sMCQ(this)\">"+disp+"</button>";
   }
-  h+='</div><div id="mR"></div></div>';
+  h+="</div><div id=\"mR\"></div></div>";
   a.innerHTML=h;
 }
-function sMCQ(btn) {
-  var chosen=btn.getAttribute('data-val');
-  var correct2=btn.getAttribute('data-correct');
-  var ok=norm(chosen)===norm(correct2);
-  if(ok){correct++;streak++;}else streak=0; updS();
-  var btns=g('main').querySelectorAll('.mopt');
-  for(var i=0;i<btns.length;i++){
-    btns[i].disabled=true;
-    if(norm(btns[i].getAttribute('data-val'))===norm(correct2)) btns[i].classList.add('reveal');
-  }
-  if(ok){btn.classList.remove('reveal');btn.classList.add('correct');}
-  else btn.classList.add('wrong');
-  g('mR').innerHTML=ok?'<div class="rs ok">&#x2713; Correct!</div>':'<div class="rs bad">&#x2717; See highlighted answer.</div>';
-  setTimeout(function(){rMCQ(g('main'));},1800);
+function sMCQ(btn){
+  var chosen=btn.getAttribute("data-val"), cor=btn.getAttribute("data-cor");
+  var ok=norm(chosen)===norm(cor);
+  if(ok){correct++;streak++;}else streak=0;updS();
+  var btns=g("main").querySelectorAll(".mopt");
+  for(var i=0;i<btns.length;i++){btns[i].disabled=true;if(norm(btns[i].getAttribute("data-val"))===norm(cor))btns[i].classList.add("reveal");}
+  if(ok){btn.classList.remove("reveal");btn.classList.add("correct");}else btn.classList.add("wrong");
+  g("mR").innerHTML=ok?"<div class=\"rs ok\">&#x2713; Correct!</div>":"<div class=\"rs bad\">&#x2717; See highlighted answer.</div>";
+  setTimeout(function(){rMCQ(g("main"));},1800);
 }
-
-// ── FLASHCARDS ────────────────────────────────────────────────────────────────
-function rFC(a) {
-  var pool=getPool(); var q=pool[fcIdx%pool.length];
-  var fwd=Math.random()<0.5;
-  var h='<div class="ph"><h1>Flashcards</h1><p>Tap the card to reveal.</p></div>';
-  h+=catBar();
-  h+='<div class="fc" onclick="document.getElementById(\'fcB\').classList.add(\'on\')">';
-  h+='<div class="fclbl">'+(fwd?'Formula':'Name')+' &mdash; tap to reveal</div>';
-  h+='<div class="'+(fwd?'fcc':'fcn')+'">'+(fwd?q.f:q.n)+'</div>';
-  h+='<div style="margin-top:10px">'+bdg(q.t)+'</div></div>';
-  h+='<div class="fcbk" id="fcB"><div class="fcbkl">'+(fwd?'Name':'Formula')+'</div><div class="fcbkc">'+(fwd?q.n:q.f)+'</div></div>';
-  h+='<div class="brow" style="justify-content:center"><button class="btn" onclick="fcNav(-1)">&larr; Prev</button><button class="btn pri" onclick="fcNav(1)">Next &rarr;</button></div>';
+function rFC(a){
+  var pool=getPool(); var q=pool[fcIdx%pool.length]; var fwd=Math.random()<0.5;
+  var h="<div class=\"ph\"><h1>Flashcards</h1><p>Tap the card to reveal.</p></div>"+catBar();
+  h+="<div class=\"fc-card\" onclick=\"g('fcB').classList.add('on')\">";
+  h+="<div class=\"fclbl\">"+(fwd?"Formula":"Name")+" &mdash; tap to reveal</div>";
+  h+="<div class=\""+(fwd?"fcc":"fcn")+"\">"+(fwd?q.f:q.n)+"</div>";
+  h+="<div style=\"margin-top:10px\">"+bdg(q.t)+"</div></div>";
+  h+="<div class=\"fcbk\" id=\"fcB\"><div class=\"fcbkl\">"+(fwd?"Name":"Formula")+"</div><div class=\"fcbkc\">"+(fwd?q.n:q.f)+"</div></div>";
+  h+="<div class=\"brow\" style=\"justify-content:center\"><button class=\"btn\" onclick=\"fcNav(-1)\">&larr; Prev</button><button class=\"btn pri\" onclick=\"fcNav(1)\">Next &rarr;</button></div>";
   a.innerHTML=h;
 }
-function fcNav(d){fcIdx=Math.max(0,fcIdx+d);rFC(g('main'));}
-
-// ── QUIZ ──────────────────────────────────────────────────────────────────────
-function rQuiz(a) {
-  if(quizSubmitted && quizResults) { rQuizResults(a); return; }
-  if(quizQs.length===0) {
-    quizQs=shuf(ALL).slice(0,30);
-    quizAnswers=quizQs.map(function(q){ return {val:'',ftn:Math.random()<0.5}; });
-    quizSubmitted=false; quizResults=null;
-  }
-  var h='<div class="ph"><h1>Quiz &mdash; 30 Questions</h1><p>Answer all questions then submit. You\'ll see all results at the end.</p></div>';
-  h+='<div id="quizWrap"></div>';
-  h+='<div style="margin-top:1.5rem;display:flex;gap:10px;flex-wrap:wrap">';
-  h+='<button class="btn grn" style="padding:11px 28px;font-size:14px" onclick="submitQuiz()">Submit all answers</button>';
-  h+='<button class="btn" onclick="resetQuiz()">Start over</button></div>';
-  a.innerHTML=h;
-  var wrap=g('quizWrap');
-  for(var i=0;i<quizQs.length;i++){
-    buildQuizCard(wrap, i);
-  }
-}
-function buildQuizCard(wrap, i) {
-  var q=quizQs[i]; var ftn=quizAnswers[i].ftn;
-  var card=document.createElement('div');
-  card.className='qcard'; card.style.marginBottom='12px';
-  var h=bdg(q.t)+'<div class="qlbl" style="margin-top:4px">Q'+( i+1)+' of 30 &mdash; '+(ftn?'Write the name':'Write the formula')+'</div>';
-  if(ftn){
-    h+='<div class="qcdsp">'+q.f+'</div>';
-    h+='<input class="qinput" id="qA'+i+'" placeholder="compound name" value="'+(quizAnswers[i].val||'').replace(/"/g,'&quot;')+'"/>';
+function fcNav(d){fcIdx=Math.max(0,fcIdx+d);rFC(g("main"));}
+function rShuffle(a){
+  var r=Math.random();
+  var h="<div class=\"ph\"><h1>Shuffle Practice</h1><p>All question types mixed.</p></div>";
+  if(r<0.25){
+    var pool=getPool(); curQ=pool[0];
+    h+="<div class=\"card\">"+bdg(curQ.t)+"<div class=\"qlbl\" style=\"margin-top:6px\">Write the name</div>";
+    h+="<div class=\"cdsp\">"+curQ.f+"</div>";
+    h+="<div class=\"hint\">For transition metals include the Roman numeral.</div>";
+    h+="<input class=\"ti\" id=\"sI\" placeholder=\"compound name\"/>";
+    h+="<div class=\"brow\"><button class=\"btn pri\" onclick=\"sShuf('ftn')\">Check &#x23CE;</button><button class=\"btn\" onclick=\"rShuffle(g('main'))\">Skip</button></div>";
+    h+="<div id=\"sR\"></div></div>";
+    a.innerHTML=h;
+    g("sI").addEventListener("keydown",function(e){if(e.key==="Enter")sShuf("ftn");});
+    focus("sI");
+  } else if(r<0.5){
+    var pool=getPool(); curQ=pool[0];
+    h+="<div class=\"card\">"+bdg(curQ.t)+"<div class=\"qlbl\" style=\"margin-top:6px\">Write the formula</div>";
+    h+="<div class=\"ndsp\">"+curQ.n+"</div>";
+    h+=stb("sI");
+    h+="<input class=\"ci\" id=\"sI\" placeholder=\"formula\"/>";
+    h+="<div class=\"brow\"><button class=\"btn pri\" onclick=\"sShuf('ntf')\">Check &#x23CE;</button><button class=\"btn\" onclick=\"rShuffle(g('main'))\">Skip</button></div>";
+    h+="<div id=\"sR\"></div></div>";
+    a.innerHTML=h;
+    g("sI").addEventListener("keydown",function(e){if(e.key==="Enter")sShuf("ntf");});
+    focus("sI");
+  } else if(r<0.75){
+    var ions=shuf(PI); curPI=ions[0];
+    h+="<div class=\"card\"><span class=\"bdg bp\">Polyatomic ion</span><div class=\"qlbl\" style=\"margin-top:6px\">Formula + charge for this ion</div>";
+    h+="<div class=\"ndsp\">"+curPI.n+"</div>";
+    h+="<div class=\"hint\">Write formula AND charge, e.g. <em>NO&#x2083;1-</em></div>";
+    h+=stb("sI");
+    h+="<input class=\"ci\" id=\"sI\" placeholder=\"formula + charge\"/>";
+    h+="<div class=\"brow\"><button class=\"btn pri\" onclick=\"sShuf('pf')\">Check &#x23CE;</button><button class=\"btn\" onclick=\"rShuffle(g('main'))\">Skip</button></div>";
+    h+="<div id=\"sR\"></div></div>";
+    a.innerHTML=h;
+    g("sI").addEventListener("keydown",function(e){if(e.key==="Enter")sShuf("pf");});
+    focus("sI");
   } else {
-    h+='<div class="qndsp">'+q.n+'</div>';
-    h+=stb('qA'+i);
-    h+='<input class="qinput mono" id="qA'+i+'" placeholder="formula" value="'+(quizAnswers[i].val||'').replace(/"/g,'&quot;')+'"/>';
+    var ions=shuf(PI); curPI=ions[0];
+    h+="<div class=\"card\"><span class=\"bdg bp\">Polyatomic ion</span><div class=\"qlbl\" style=\"margin-top:6px\">Name this ion</div>";
+    h+="<div class=\"cdsp\">"+curPI.f+"<sup style=\"font-size:.55em\">"+curPI.c+"</sup></div>";
+    h+="<input class=\"ti\" id=\"sI\" placeholder=\"ion name\"/>";
+    h+="<div class=\"brow\"><button class=\"btn pri\" onclick=\"sShuf('pn')\">Check &#x23CE;</button><button class=\"btn\" onclick=\"rShuffle(g('main'))\">Skip</button></div>";
+    h+="<div id=\"sR\"></div></div>";
+    a.innerHTML=h;
+    g("sI").addEventListener("keydown",function(e){if(e.key==="Enter")sShuf("pn");});
+    focus("sI");
   }
-  card.innerHTML=h;
-  wrap.appendChild(card);
-  // attach listener
-  (function(idx){
-    setTimeout(function(){
-      var inp=g('qA'+idx);
-      if(inp) inp.addEventListener('input',function(){quizAnswers[idx].val=this.value;});
-    },50);
-  })(i);
 }
-function submitQuiz() {
-  var score=0; var results=[];
+function sShuf(type){
+  var e=g("sI"); if(!e||!e.value.trim()) return;
+  var ok=false, ansHtml="";
+  if(type==="ftn"){ok=chk(e.value.trim(),curQ.n);ansHtml="<strong>"+curQ.n+"</strong>";}
+  else if(type==="ntf"){ok=chk(e.value.trim(),curQ.fr);ansHtml="<strong>"+curQ.f+"</strong>";}
+  else if(type==="pf"){ok=chk(e.value.trim(),curPI.fr+curPI.cr);ansHtml="<strong>"+curPI.f+"<sup style=\"font-size:.55em\">"+curPI.c+"</sup></strong>";}
+  else if(type==="pn"){ok=chk(e.value.trim(),curPI.n);ansHtml="<strong>"+curPI.n+"</strong>";}
+  if(ok){correct++;streak++;}else streak=0;updS();e.disabled=true;
+  var r=g("sR");
+  if(ok){r.innerHTML="<div class=\"rs ok\">&#x2713; Correct!</div>";setTimeout(function(){rShuffle(g("main"));},1300);}
+  else{r.innerHTML="<div class=\"rs bad\">&#x2717; Answer: "+ansHtml+"</div>";var btn=g("main").querySelector(".btn.pri");btn.textContent="Next \u2192";btn.onclick=function(){rShuffle(g("main"));};}
+}
+function rQuiz(a){
+  if(quizSubmitted&&quizResults){rQuizResults(a);return;}
+  if(quizQs.length===0){
+    quizQs=shuf(ALL).slice(0,30);
+    quizAnswers=quizQs.map(function(q){return{val:"",ftn:Math.random()<0.5};});
+    quizSubmitted=false;quizResults=null;
+  }
+  var h="<div class=\"ph\"><h1>Quiz &mdash; 30 Questions</h1><p>Answer all questions then submit to see results.</p></div>";
+  h+="<div id=\"quizWrap\"></div>";
+  h+="<div style=\"margin-top:1.5rem;display:flex;gap:10px;flex-wrap:wrap\">";
+  h+="<button class=\"btn grn\" style=\"padding:11px 28px;font-size:14px\" onclick=\"submitQuiz()\">Submit all answers</button>";
+  h+="<button class=\"btn\" onclick=\"resetQuiz()\">Start over</button></div>";
+  a.innerHTML=h;
+  var wrap=g("quizWrap");
+  for(var i=0;i<quizQs.length;i++) buildQCard(wrap,i);
+}
+function buildQCard(wrap,i){
+  var q=quizQs[i]; var ftn=quizAnswers[i].ftn;
+  var card=document.createElement("div"); card.className="qcard";
+  var h=bdg(q.t)+"<div class=\"qlbl\" style=\"margin-top:4px\">Q"+(i+1)+" of 30 &mdash; "+(ftn?"Write the name":"Write the formula")+"</div>";
+  if(ftn){h+="<div class=\"qcdsp\">"+q.f+"</div><input class=\"qinput\" id=\"qA"+i+"\" placeholder=\"compound name\" value=\""+(quizAnswers[i].val||"").replace(/"/g,"&quot;")+"\"\"/>";}
+  else{h+="<div class=\"qndsp\">"+q.n+"</div>"+stb("qA"+i)+"<input class=\"qinput mono\" id=\"qA"+i+"\" placeholder=\"formula\" value=\""+(quizAnswers[i].val||"").replace(/"/g,"&quot;")+"\"\"/>";}
+  card.innerHTML=h; wrap.appendChild(card);
+  (function(idx){setTimeout(function(){var inp=g("qA"+idx);if(inp)inp.addEventListener("input",function(){quizAnswers[idx].val=this.value;});},50);})(i);
+}
+function submitQuiz(){
+  var score=0,results=[];
   for(var i=0;i<quizQs.length;i++){
-    var q=quizQs[i]; var ftn=quizAnswers[i].ftn;
-    var ans=(quizAnswers[i].val||'').trim();
+    var q=quizQs[i],ftn=quizAnswers[i].ftn,ans=(quizAnswers[i].val||"").trim();
     var ok=ftn?chk(ans,q.n):chk(ans,q.fr);
-    if(ok) score++;
+    if(ok)score++;
     results.push({q:q,ftn:ftn,ans:ans,ok:ok});
   }
-  quizSubmitted=true;
-  quizResults={score:score,results:results};
-  rQuizResults(g('main'));
+  quizSubmitted=true;quizResults={score:score,results:results};rQuizResults(g("main"));
 }
-function rQuizResults(a) {
-  var score=quizResults.score; var results=quizResults.results;
+function rQuizResults(a){
+  var score=quizResults.score,results=quizResults.results;
   var pct=Math.round(score/30*100);
-  var em=pct>=90?'&#x1F389;':pct>=70?'&#x1F44D;':pct>=50?'&#x1F4DA;':'&#x1F4AA;';
-  var h='<div class="qsum"><div style="font-size:36px;margin-bottom:10px">'+em+'</div>';
-  h+='<h2 style="font-size:22px;font-weight:600;margin-bottom:6px">'+score+' / 30</h2>';
-  h+='<p style="font-size:15px;color:var(--t2);margin-bottom:1rem">'+pct+'% &mdash; '+(pct>=90?'Excellent!':pct>=70?'Good job!':pct>=50?'Keep practicing!':'More review needed.')+'</p>';
-  h+='<div class="qbdg">';
-  h+='<div class="qbd"><div class="qbdn" style="color:var(--gntx)">'+score+'</div><div class="qbdl">Correct</div></div>';
-  h+='<div class="qbd"><div class="qbdn" style="color:var(--rdtx)">'+(30-score)+'</div><div class="qbdl">Incorrect</div></div>';
-  h+='<div class="qbd"><div class="qbdn">'+pct+'%</div><div class="qbdl">Score</div></div>';
-  h+='</div>';
-  h+='<button class="btn pri" onclick="resetQuiz()">New quiz</button>&nbsp;<button class="btn" onclick="setMode(\'ftn\')">Practice</button></div>';
+  var em=pct>=90?"&#x1F389;":pct>=70?"&#x1F44D;":pct>=50?"&#x1F4DA;":"&#x1F4AA;";
+  var h="<div class=\"qsum\"><div style=\"font-size:36px;margin-bottom:10px\">"+em+"</div>";
+  h+="<h2 style=\"font-size:22px;font-weight:600;margin-bottom:6px\">"+score+" / 30</h2>";
+  h+="<p style=\"font-size:15px;color:var(--t2);margin-bottom:1rem\">"+pct+"% &mdash; "+(pct>=90?"Excellent!":pct>=70?"Good job!":pct>=50?"Keep practicing!":"More review needed.")+"</p>";
+  h+="<div class=\"qbdg\"><div class=\"qbd\"><div class=\"qbdn\" style=\"color:var(--gntx)\">"+score+"</div><div class=\"qbdl\">Correct</div></div>";
+  h+="<div class=\"qbd\"><div class=\"qbdn\" style=\"color:var(--rdtx)\">"+(30-score)+"</div><div class=\"qbdl\">Incorrect</div></div>";
+  h+="<div class=\"qbd\"><div class=\"qbdn\">"+pct+"%</div><div class=\"qbdl\">Score</div></div></div>";
+  h+="<button class=\"btn pri\" onclick=\"resetQuiz()\">New quiz</button>&nbsp;<button class=\"btn\" onclick=\"setMode('ftn')\">Practice</button></div>";
   var wrong=results.filter(function(r){return !r.ok;});
   var right=results.filter(function(r){return r.ok;});
   if(wrong.length){
-    h+='<div class="qs-sec"><h3 style="color:var(--rdtx)">&#x2717; Incorrect ('+wrong.length+')</h3>';
-    for(var i=0;i<wrong.length;i++){
-      var r=wrong[i];
-      h+='<div class="qs-item bad"><span class="qs-q">'+(r.ftn?r.q.f:r.q.n)+'</span>';
-      h+='<span><span class="qs-w">'+(r.ans||'(blank)')+'</span> &rarr; <span class="qs-a">'+(r.ftn?r.q.n:r.q.f)+'</span></span></div>';
-    }
-    h+='</div>';
+    h+="<div class=\"qs-sec\"><h3 style=\"color:var(--rdtx)\">&#x2717; Incorrect ("+wrong.length+")</h3>";
+    for(var i=0;i<wrong.length;i++){var r=wrong[i];h+="<div class=\"qs-item bad\"><span class=\"qs-q\">"+(r.ftn?r.q.f:r.q.n)+"</span><span><span class=\"qs-w\">"+(r.ans||"(blank)")+"</span> &rarr; <span class=\"qs-a\">"+(r.ftn?r.q.n:r.q.f)+"</span></span></div>";}
+    h+="</div>";
   }
   if(right.length){
-    h+='<div class="qs-sec"><h3 style="color:var(--gntx)">&#x2713; Correct ('+right.length+')</h3>';
-    for(var i=0;i<right.length;i++){
-      var r=right[i];
-      h+='<div class="qs-item ok"><span class="qs-q">'+(r.ftn?r.q.f:r.q.n)+'</span><span class="qs-a">'+(r.ftn?r.q.n:r.q.f)+'</span></div>';
-    }
-    h+='</div>';
+    h+="<div class=\"qs-sec\"><h3 style=\"color:var(--gntx)\">&#x2713; Correct ("+right.length+")</h3>";
+    for(var i=0;i<right.length;i++){var r=right[i];h+="<div class=\"qs-item ok\"><span class=\"qs-q\">"+(r.ftn?r.q.f:r.q.n)+"</span><span class=\"qs-a\">"+(r.ftn?r.q.n:r.q.f)+"</span></div>";}
+    h+="</div>";
   }
   a.innerHTML=h;
 }
-function resetQuiz(){quizQs=[];quizAnswers=[];quizSubmitted=false;quizResults=null;rQuiz(g('main'));}
-
-// ── POLYATOMIC TABLE ──────────────────────────────────────────────────────────
-function rPT(a) {
-  var cbN=g('cbN')?g('cbN').checked:true;
-  var cbF=g('cbF')?g('cbF').checked:false;
-  var cbC=g('cbC')?g('cbC').checked:false;
-  var cbAll=g('cbAll')?g('cbAll').checked:false;
-  var hN=cbAll||cbN; var hF=cbAll||cbF; var hC=cbAll||cbC;
-  var h='<div class="ph"><h1>Polyatomic Ion Table</h1><p>Check what to hide, fill in the blanks, then check.</p></div>';
-  h+='<div class="cbrow">';
-  h+='<span class="slbl" style="margin:0">Hide:</span>';
-  h+='<label class="cblbl"><input type="checkbox" id="cbN" '+(hN?'checked':'')+' onchange="rPT(g(\'main\'))"> Names</label>';
-  h+='<label class="cblbl"><input type="checkbox" id="cbF" '+(hF?'checked':'')+' onchange="rPT(g(\'main\'))"> Formulas</label>';
-  h+='<label class="cblbl"><input type="checkbox" id="cbC" '+(hC?'checked':'')+' onchange="rPT(g(\'main\'))"> Charges</label>';
-  h+='<label class="cblbl" style="margin-left:8px;padding-left:8px;border-left:.5px solid var(--bd)"><input type="checkbox" id="cbAll" '+(cbAll?'checked':'')+' onchange="ptAll(this)"> Full recall</label>';
-  h+='</div>';
-  h+='<table class="ptbl"><thead><tr><th>Name</th><th>Formula</th><th>Charge</th></tr></thead><tbody>';
+function resetQuiz(){quizQs=[];quizAnswers=[];quizSubmitted=false;quizResults=null;rQuiz(g("main"));}
+function rPT(a){
+  var cbN=g("cbN")?g("cbN").checked:true;
+  var cbF=g("cbF")?g("cbF").checked:false;
+  var cbC=g("cbC")?g("cbC").checked:false;
+  var cbAll=g("cbAll")?g("cbAll").checked:false;
+  var hN=cbAll||cbN,hF=cbAll||cbF,hC=cbAll||cbC;
+  var h="<div class=\"ph\"><h1>Polyatomic Ion Table</h1><p>Check what to hide, fill blanks, then check.</p></div>";
+  h+="<div class=\"cbrow\">";
+  h+="<span class=\"slbl\" style=\"margin:0\">Hide:</span>";
+  h+="<label class=\"cblbl\"><input type=\"checkbox\" id=\"cbN\" "+(hN?"checked":"")+" onchange=\"rPT(g('main'))\"> Names</label>";
+  h+="<label class=\"cblbl\"><input type=\"checkbox\" id=\"cbF\" "+(hF?"checked":"")+" onchange=\"rPT(g('main'))\"> Formulas</label>";
+  h+="<label class=\"cblbl\"><input type=\"checkbox\" id=\"cbC\" "+(hC?"checked":"")+" onchange=\"rPT(g('main'))\"> Charges</label>";
+  h+="<label class=\"cblbl\" style=\"margin-left:8px;padding-left:8px;border-left:.5px solid var(--bd)\"><input type=\"checkbox\" id=\"cbAll\" "+(cbAll?"checked":"")+" onchange=\"ptAll(this)\"> Full recall</label>";
+  h+="</div><table class=\"ptbl\"><thead><tr><th>Name</th><th>Formula</th><th>Charge</th></tr></thead><tbody>";
   for(var i=0;i<PI.length;i++){
     var ion=PI[i];
-    h+='<tr>';
-    h+='<td>'+(hN?'<input class="pti" data-ans="'+ion.n+'" placeholder="name...">':'<strong>'+ion.n+'</strong>')+'</td>';
-    h+='<td style="font-family:var(--mo)">'+(hF?'<input class="pti" style="font-family:var(--mo)" data-ans="'+ion.fr+'" placeholder="formula...">':ion.f)+'</td>';
-    h+='<td style="min-width:65px">'+(hC?'<input class="pti" style="width:65px;font-family:var(--mo)" data-ans="'+ion.cr+'" placeholder="...">':ion.c)+'</td>';
-    h+='</tr>';
+    h+="<tr><td>"+(hN?"<input class=\"pti\" data-ans=\""+ion.n+"\" placeholder=\"name...\">":"<strong>"+ion.n+"</strong>")+"</td>";
+    h+="<td style=\"font-family:var(--mo)\">"+(hF?"<input class=\"pti\" style=\"font-family:var(--mo)\" data-ans=\""+ion.fr+"\" placeholder=\"formula...\">":ion.f)+"</td>";
+    h+="<td style=\"min-width:65px\">"+(hC?"<input class=\"pti\" style=\"width:65px;font-family:var(--mo)\" data-ans=\""+ion.cr+"\" placeholder=\"...\">":ion.c)+"</td></tr>";
   }
-  h+='</tbody></table>';
-  h+='<div class="brow"><button class="btn pri" onclick="chkPT()">Check all</button><button class="btn" onclick="rPT(g(\'main\'))">Reset</button></div>';
-  h+='<div id="ptS" style="margin-top:10px;font-size:14px;font-weight:500"></div>';
+  h+="</tbody></table><div class=\"brow\"><button class=\"btn pri\" onclick=\"chkPT()\">Check all</button><button class=\"btn\" onclick=\"rPT(g('main'))\">Reset</button></div>";
+  h+="<div id=\"ptS\" style=\"margin-top:10px;font-size:14px;font-weight:500\"></div>";
   a.innerHTML=h;
 }
-function ptAll(cb) {
-  var v=cb.checked;
-  ['cbN','cbF','cbC'].forEach(function(id){var el=g(id);if(el)el.checked=v;});
-  rPT(g('main'));
-}
-function chkPT() {
-  var inputs=g('main').querySelectorAll('.pti');
-  var tot=0,ok=0;
+function ptAll(cb){var v=cb.checked;["cbN","cbF","cbC"].forEach(function(id){var el=g(id);if(el)el.checked=v;});rPT(g("main"));}
+function chkPT(){
+  var inputs=g("main").querySelectorAll(".pti"),tot=0,ok=0;
   for(var i=0;i<inputs.length;i++){
-    var inp=inputs[i]; var v=inp.value.trim(); if(!v) continue;
-    tot++;
-    var c=chk(v,inp.getAttribute('data-ans'));
-    inp.classList.toggle('ok',c); inp.classList.toggle('bad',!c);
-    if(c) ok++;
+    var inp=inputs[i],v=inp.value.trim(); if(!v) continue; tot++;
+    var c=chk(v,inp.getAttribute("data-ans"));
+    inp.classList.toggle("ok",c);inp.classList.toggle("bad",!c);if(c)ok++;
   }
-  if(!tot){g('ptS').textContent='Fill in some blanks first!';return;}
-  g('ptS').textContent=ok+' / '+tot+' correct';
+  if(!tot){g("ptS").textContent="Fill in some blanks first!";return;}
+  g("ptS").textContent=ok+" / "+tot+" correct";
 }
-
-// ── LESSONS ───────────────────────────────────────────────────────────────────
 var LESSONS=[
-  {id:'ions',icon:'&#x26A1;',title:'Ions &amp; Charges',desc:'How atoms gain/lose electrons and form ions'},
-  {id:'ionic',icon:'&#x1F517;',title:'Binary Ionic',desc:'Naming metal + nonmetal compounds'},
-  {id:'trans',icon:'&#x2699;&#xFE0F;',title:'Transition Metals',desc:'Roman numerals and variable charges'},
-  {id:'cov',icon:'&#x1F9EA;',title:'Binary Covalent',desc:'Prefixes for nonmetal + nonmetal'},
-  {id:'poly',icon:'&#x1F9F2;',title:'Polyatomic Ions',desc:'Groups of atoms with a charge'},
-  {id:'flow',icon:'&#x1F5FA;&#xFE0F;',title:'Naming Flowchart',desc:'Step-by-step decision guide'}
+  {id:"ions",icon:"&#x26A1;",title:"Ions &amp; Charges",desc:"How atoms gain/lose electrons and form ions"},
+  {id:"ionic",icon:"&#x1F517;",title:"Binary Ionic",desc:"Naming metal + nonmetal compounds"},
+  {id:"trans",icon:"&#x2699;&#xFE0F;",title:"Transition Metals",desc:"Roman numerals and variable charges"},
+  {id:"cov",icon:"&#x1F9EA;",title:"Binary Covalent",desc:"Prefixes for nonmetal + nonmetal"},
+  {id:"poly",icon:"&#x1F9F2;",title:"Polyatomic Ions",desc:"Groups of atoms with a charge"},
+  {id:"flow",icon:"&#x1F5FA;&#xFE0F;",title:"Naming Flowchart",desc:"Step-by-step decision guide"}
 ];
-function rLearn(a) {
-  var h='<div class="ph"><h1>Lessons</h1><p>Work through each topic in order.</p></div>';
-  h+='<div class="lgrid">';
+function rLearn(a){
+  var h="<div class=\"ph\"><h1>Lessons</h1><p>Work through each topic in order.</p></div><div class=\"lgrid\">";
   for(var i=0;i<LESSONS.length;i++){
     var l=LESSONS[i];
-    h+='<button class="ltile'+(learnDone[l.id]?' done':'')+'" onclick="showLesson(\''+l.id+'\')">';
-    h+='<div class="icon">'+l.icon+'</div><h3>'+l.title+'</h3><p>'+l.desc+'</p>';
-    if(learnDone[l.id]) h+='<div class="done-tag">&#x2713; Reviewed</div>';
-    h+='</button>';
+    h+="<button class=\"ltile"+(learnDone[l.id]?" done":"")+"\" onclick=\"showLesson('"+l.id+"')\">";
+    h+="<div class=\"icon\">"+l.icon+"</div><h3>"+l.title+"</h3><p>"+l.desc+"</p>";
+    if(learnDone[l.id]) h+="<div class=\"done-tag\">&#x2713; Reviewed</div>";
+    h+="</button>";
   }
-  h+='</div>';
-  a.innerHTML=h;
+  a.innerHTML=h+"</div>";
 }
-function showLesson(id) {
-  var a=g('main');
-  var content=getLessonHTML(id);
-  a.innerHTML='<button class="btn" style="margin-bottom:1rem" onclick="rLearn(g(\'main\'))">&larr; Back</button>'
-    +content
-    +'<div class="brow" style="margin-top:1.5rem"><button class="btn grn" onclick="learnDone[\''+id+'\']=true;rLearn(g(\'main\'))">&#x2713; Mark reviewed</button></div>';
+function showLesson(id){
+  var a=g("main");
+  a.innerHTML="<button class=\"btn\" style=\"margin-bottom:1rem\" onclick=\"rLearn(g('main'))\">&larr; Back</button>"+getLessonHTML(id)+"<div class=\"brow\" style=\"margin-top:1.5rem\"><button class=\"btn grn\" onclick=\"learnDone['"+id+"']=true;rLearn(g('main'))\">&#x2713; Mark reviewed</button></div>";
 }
-function getLessonHTML(id) {
-  if(id==='ions') return ''
-    +'<div class="lcard"><h2>&#x26A1; Ions &amp; Charges</h2>'
-    +'<p>Chemical reactions happen when atoms <strong>gain, lose, or share electrons</strong>. Gaining or losing electrons creates <strong>ions</strong>.</p>'
-    +'<div class="step"><div class="stepn">1</div><div><strong>Metals lose electrons</strong> &rarr; positive ions called <strong>cations</strong><br><code>Na &rarr; Na&#x207A; + e&#x207B;</code></div></div>'
-    +'<div class="step"><div class="stepn">2</div><div><strong>Nonmetals gain electrons</strong> &rarr; negative ions called <strong>anions</strong><br><code>Cl + e&#x207B; &rarr; Cl&#x207B;</code></div></div>'
-    +'<p>Ion charges come from periodic table position:</p>'
-    +'<div class="ex"><div class="exlbl">Charges by group</div>Group 1 &rarr; +1 &nbsp;|&nbsp; Group 2 &rarr; +2 &nbsp;|&nbsp; Group 15 &rarr; &minus;3 &nbsp;|&nbsp; Group 16 &rarr; &minus;2 &nbsp;|&nbsp; Group 17 &rarr; &minus;1</div>'
-    +'<p>Naming nonmetal anions: drop the element ending, add <strong>-ide</strong></p>'
-    +'<div class="ex"><div class="exlbl">Examples</div>chlor<em>ine</em> &rarr; chlor<strong>ide</strong> &nbsp;|&nbsp; sulf<em>ur</em> &rarr; sulf<strong>ide</strong> &nbsp;|&nbsp; ox<em>ygen</em> &rarr; ox<strong>ide</strong> &nbsp;|&nbsp; nitr<em>ogen</em> &rarr; nitr<strong>ide</strong></div>'
-    +'</div>';
-  if(id==='ionic') return ''
-    +'<div class="lcard"><h2>&#x1F517; Binary Ionic Compounds</h2>'
-    +'<p>A binary ionic compound = <strong>one metal + one nonmetal</strong>. The metal gives electrons to the nonmetal so their charges cancel (net charge = 0).</p>'
-    +'<p><strong>Naming steps:</strong></p>'
-    +'<div class="step"><div class="stepn">1</div><div>Write the metal name <em>unchanged</em> &mdash; calcium, sodium, magnesium</div></div>'
-    +'<div class="step"><div class="stepn">2</div><div>Write the nonmetal name with <strong>-ide</strong> ending &mdash; chloride, sulfide, oxide</div></div>'
-    +'<div class="step"><div class="stepn">3</div><div>Done! <strong>No prefixes</strong> for ionic compounds.</div></div>'
-    +'<div class="ex"><div class="exlbl">Formula &rarr; Name</div>NaCl &rarr; sodium chloride<br>MgO &rarr; magnesium oxide<br>CaBr&#x2082; &rarr; calcium bromide<br>Li&#x2083;N &rarr; lithium nitride</div>'
-    +'<p style="margin-top:.75rem"><strong>Writing formulas (crisscross method):</strong> swap charge magnitudes as subscripts, then simplify if possible.</p>'
-    +'<div class="ex"><div class="exlbl">Crisscross example</div>Ca&#xB2;&#x207A; + Cl&#x207B; &rarr; Ca<sub>1</sub>Cl<sub>2</sub> &rarr; CaCl&#x2082;<br>Al&#xB3;&#x207A; + O&#xB2;&#x207B; &rarr; Al<sub>2</sub>O<sub>3</sub> &rarr; Al&#x2082;O&#x2083;</div>'
-    +'</div>';
-  if(id==='trans') return ''
-    +'<div class="lcard"><h2>&#x2699;&#xFE0F; Transition Metals &amp; Roman Numerals</h2>'
-    +'<p>Transition metals can form ions with <strong>more than one possible charge</strong>. We must specify which charge using a <strong>Roman numeral in parentheses</strong> after the metal name.</p>'
-    +'<div class="ex"><div class="exlbl">Common transition metal charges</div>Fe: +2 (II) or +3 (III)<br>Cu: +1 (I) or +2 (II)<br>Sn: +2 (II) or +4 (IV)<br>Pb: +2 (II) or +4 (IV)<br>Mn: +2 (II), +4 (IV), +7 (VII)<br>Cr: +2 (II) or +3 (III)</div>'
-    +'<p style="margin-top:.75rem"><strong>Finding the Roman numeral from a formula:</strong></p>'
-    +'<div class="step"><div class="stepn">1</div><div>Find the total negative charge of all anions.</div></div>'
-    +'<div class="step"><div class="stepn">2</div><div>Divide by the number of metal ions &rarr; that is each metal ion\'s charge.</div></div>'
-    +'<div class="step"><div class="stepn">3</div><div>Convert to Roman numeral and place in parentheses.</div></div>'
-    +'<div class="ex"><div class="exlbl">Example: Fe&#x2082;O&#x2083;</div>3 oxygens &times; (&minus;2) = &minus;6 total<br>2 iron ions &rarr; &minus;6 &divide; 2 = &minus;3 &rarr; each iron is +3<br>&rarr; <strong>iron(III) oxide</strong></div>'
-    +'<div class="ex"><div class="exlbl">Exceptions (NO Roman numeral needed)</div>Silver Ag = always +1 &nbsp;|&nbsp; Zinc Zn = always +2 &nbsp;|&nbsp; Cadmium Cd = always +2</div>'
-    +'</div>';
-  if(id==='cov') return ''
-    +'<div class="lcard"><h2>&#x1F9EA; Binary Covalent Compounds</h2>'
-    +'<p>Covalent compounds form when <strong>two nonmetals share electrons</strong>. Two nonmetals can share in many different ratios (CO vs CO&#x2082;), so we use <strong>numerical prefixes</strong> to show exactly how many of each atom.</p>'
-    +'<div class="ex"><div class="exlbl">Prefixes</div>1=mono &nbsp; 2=di &nbsp; 3=tri &nbsp; 4=tetra &nbsp; 5=penta &nbsp; 6=hexa &nbsp; 7=hepta &nbsp; 8=octa &nbsp; 9=nona &nbsp; 10=deca</div>'
-    +'<p style="margin-top:.75rem"><strong>Naming steps:</strong></p>'
-    +'<div class="step"><div class="stepn">1</div><div>Name the first nonmetal. <em>Skip mono- if there is only 1 of it.</em></div></div>'
-    +'<div class="step"><div class="stepn">2</div><div>Name the second nonmetal with <strong>-ide</strong> ending, adding the prefix for its count.</div></div>'
-    +'<div class="step"><div class="stepn">3</div><div>Drop trailing -a or -o from prefix before "oxide": <em>tetr<s>a</s>oxide &rarr; tetroxide</em></div></div>'
-    +'<div class="ex"><div class="exlbl">Examples</div>CO&#x2082; &rarr; carbon dioxide (not monocarbon dioxide)<br>N&#x2082;O&#x2085; &rarr; dinitrogen pentoxide<br>PCl&#x2083; &rarr; phosphorus trichloride<br>N&#x2082;O&#x2084; &rarr; dinitrogen tetroxide (NOT tetraoxide)</div>'
-    +'</div>';
-  if(id==='poly') return ''
-    +'<div class="lcard"><h2>&#x1F9F2; Polyatomic Ions</h2>'
-    +'<p>A polyatomic ion is a <strong>group of atoms that carries a charge as a whole</strong>. The atoms inside are held by covalent bonds, but the whole group acts like a single ion.</p>'
-    +'<p><strong>You must memorize the common polyatomic ions.</strong> Key patterns to remember:</p>'
-    +'<div class="ex"><div class="exlbl">-ate vs -ite pattern</div>More oxygens = <strong>-ate</strong>: sulfate SO&#x2084;&#xB2;&#x207B;, nitrate NO&#x2083;&#x207B;, chlorate ClO&#x2083;&#x207B;<br>Fewer oxygens = <strong>-ite</strong>: sulfite SO&#x2083;&#xB2;&#x207B;, nitrite NO&#x2082;&#x207B;, chlorite ClO&#x2082;&#x207B;</div>'
-    +'<div class="ex"><div class="exlbl">The only common positive polyatomic ion</div>Ammonium: NH&#x2084;&#x207A; &mdash; use it just like a metal cation</div>'
-    +'<div class="ex"><div class="exlbl">Parentheses rule</div>Ca&#xB2;&#x207A; + OH&#x207B; &rarr; Ca(OH)&#x2082; &nbsp;&#x2190; parentheses because 2 hydroxide ions needed<br>K&#x207A; + SO&#x2084;&#xB2;&#x207B; &rarr; K&#x2082;SO&#x2084; &nbsp;&#x2190; no parentheses, only 1 sulfate</div>'
-    +'<p style="margin-top:.75rem">Key ions for your class: hydroxide OH&#x207B;, nitrate NO&#x2083;&#x207B;, nitrite NO&#x2082;&#x207B;, sulfate SO&#x2084;&#xB2;&#x207B;, sulfite SO&#x2083;&#xB2;&#x207B;, carbonate CO&#x2083;&#xB2;&#x207B;, phosphate PO&#x2084;&#xB3;&#x207B;, ammonium NH&#x2084;&#x207A;, permanganate MnO&#x2084;&#x207B;, dichromate Cr&#x2082;O&#x2087;&#xB2;&#x207B;</p>'
-    +'</div>';
-  if(id==='flow') return ''
-    +'<div class="lcard"><h2>&#x1F5FA;&#xFE0F; Naming Decision Flowchart</h2>'
-    +'<p>Use this tree anytime you see a formula and need to figure out how to name it.</p>'
-    +'<div style="overflow-x:auto;padding:.5rem 0">'
-    +'<div style="display:flex;flex-direction:column;align-items:center;gap:.3rem;min-width:320px">'
-    +'<div class="fcnode fcq">Does the compound contain a metal?</div>'
-    +'<div style="display:flex;gap:3rem"><span style="font-size:11px;color:var(--t3)">YES &#x2193;</span><span style="font-size:11px;color:var(--t3)">NO &#x2193;</span></div>'
-    +'<div class="fcrow">'
-    +'<div class="fccol">'
-    +'<div class="fcnode fcq">Is it a transition metal? (d-block)</div>'
-    +'<div style="display:flex;gap:2rem"><span style="font-size:11px;color:var(--t3)">YES &#x2193;</span><span style="font-size:11px;color:var(--t3)">NO &#x2193;</span></div>'
-    +'<div class="fcrow">'
-    +'<div class="fccol">'
-    +'<div class="fcnode fcq">Any polyatomic ions?</div>'
-    +'<div style="display:flex;gap:1rem"><span style="font-size:11px;color:var(--t3)">YES &#x2193;</span><span style="font-size:11px;color:var(--t3)">NO &#x2193;</span></div>'
-    +'<div class="fcrow">'
-    +'<div class="fcnode fca">metal + Roman numeral + polyatomic name</div>'
-    +'<div class="fcnode fca">metal + Roman numeral + -ide ending</div>'
-    +'</div>'
-    +'</div>'
-    +'<div class="fccol">'
-    +'<div class="fcnode fcq">Any polyatomic ions?</div>'
-    +'<div style="display:flex;gap:1rem"><span style="font-size:11px;color:var(--t3)">YES &#x2193;</span><span style="font-size:11px;color:var(--t3)">NO &#x2193;</span></div>'
-    +'<div class="fcrow">'
-    +'<div class="fcnode fca">metal + polyatomic name</div>'
-    +'<div class="fcnode fca">metal + -ide ending</div>'
-    +'</div>'
-    +'</div>'
-    +'</div>'
-    +'</div>'
-    +'<div class="fccol">'
-    +'<div class="fcnode fcq">Binary covalent: two nonmetals</div>'
-    +'<div class="fcarr">&#x2193;</div>'
-    +'<div class="fcnode fca">Use prefixes + -ide ending on second element</div>'
-    +'<div class="fcnode fcw" style="margin-top:.3rem">No mono- on first. Drop -o/-a before &ldquo;oxide&rdquo;</div>'
-    +'</div>'
-    +'</div>'
-    +'</div></div>'
-    +'</div>';
-  return '<p>Lesson not found.</p>';
+function getLessonHTML(id){
+  if(id==="ions") return "<div class=\"lcard\"><h2>&#x26A1; Ions &amp; Charges</h2><p>Chemical reactions happen when atoms <strong>gain, lose, or share electrons</strong>. Gaining or losing electrons creates <strong>ions</strong>.</p><div class=\"step\"><div class=\"stepn\">1</div><div><strong>Metals lose electrons</strong> &rarr; positive ions called <strong>cations</strong></div></div><div class=\"step\"><div class=\"stepn\">2</div><div><strong>Nonmetals gain electrons</strong> &rarr; negative ions called <strong>anions</strong></div></div><p>Charges from periodic table position:</p><div class=\"ex\"><div class=\"exlbl\">Charges by group</div>Group 1 &rarr; +1 &nbsp;|&nbsp; Group 2 &rarr; +2 &nbsp;|&nbsp; Group 15 &rarr; 3- &nbsp;|&nbsp; Group 16 &rarr; 2- &nbsp;|&nbsp; Group 17 &rarr; 1-</div><p>Naming nonmetal anions: drop element ending, add <strong>-ide</strong></p><div class=\"ex\"><div class=\"exlbl\">Examples</div>chlorine &rarr; chloride &nbsp;|&nbsp; sulfur &rarr; sulfide &nbsp;|&nbsp; oxygen &rarr; oxide &nbsp;|&nbsp; nitrogen &rarr; nitride</div></div>";
+  if(id==="ionic") return "<div class=\"lcard\"><h2>&#x1F517; Binary Ionic Compounds</h2><p>Binary ionic = <strong>one metal + one nonmetal</strong>. Charges cancel (net = 0).</p><div class=\"step\"><div class=\"stepn\">1</div><div>Write metal name unchanged</div></div><div class=\"step\"><div class=\"stepn\">2</div><div>Write nonmetal name with <strong>-ide</strong></div></div><div class=\"step\"><div class=\"stepn\">3</div><div><strong>No prefixes.</strong> Done.</div></div><div class=\"ex\"><div class=\"exlbl\">Examples</div>NaCl &rarr; sodium chloride<br>MgO &rarr; magnesium oxide<br>CaBr&#x2082; &rarr; calcium bromide<br>Li&#x2083;N &rarr; lithium nitride</div><p style=\"margin-top:.75rem\"><strong>Writing formulas (crisscross):</strong> swap charge magnitudes as subscripts.</p><div class=\"ex\"><div class=\"exlbl\">Example</div>Ca2+ + Cl1- &rarr; CaCl&#x2082; &nbsp;|&nbsp; Al3+ + O2- &rarr; Al&#x2082;O&#x2083;</div></div>";
+  if(id==="trans") return "<div class=\"lcard\"><h2>&#x2699;&#xFE0F; Transition Metals &amp; Roman Numerals</h2><p>Transition metals can have <strong>multiple possible charges</strong>, so we include a <strong>Roman numeral</strong> in the name.</p><div class=\"ex\"><div class=\"exlbl\">Common charges</div>Fe: 2+ or 3+ &nbsp;|&nbsp; Cu: 1+ or 2+ &nbsp;|&nbsp; Sn: 2+ or 4+ &nbsp;|&nbsp; Pb: 2+ or 4+ &nbsp;|&nbsp; Mn: 2+, 4+, 7+</div><div class=\"step\"><div class=\"stepn\">1</div><div>Find total negative charge of all anions</div></div><div class=\"step\"><div class=\"stepn\">2</div><div>Divide by number of metal ions = each metal ion charge</div></div><div class=\"step\"><div class=\"stepn\">3</div><div>Convert to Roman numeral in parentheses</div></div><div class=\"ex\"><div class=\"exlbl\">Example: Fe&#x2082;O&#x2083;</div>3 oxygens &times; 2- = 6- total &nbsp; 6 &divide; 2 iron = 3+ each &rarr; iron(III) oxide</div><div class=\"ex\"><div class=\"exlbl\">Exceptions (no Roman numeral)</div>Ag always 1+ &nbsp;|&nbsp; Zn always 2+ &nbsp;|&nbsp; Cd always 2+</div></div>";
+  if(id==="cov") return "<div class=\"lcard\"><h2>&#x1F9EA; Binary Covalent Compounds</h2><p>Two nonmetals sharing electrons. Use <strong>numerical prefixes</strong> because the ratio matters.</p><div class=\"ex\"><div class=\"exlbl\">Prefixes</div>1=mono &nbsp; 2=di &nbsp; 3=tri &nbsp; 4=tetra &nbsp; 5=penta &nbsp; 6=hexa &nbsp; 7=hepta &nbsp; 8=octa &nbsp; 9=nona &nbsp; 10=deca</div><div class=\"step\"><div class=\"stepn\">1</div><div>Name first nonmetal. Skip mono- if only 1.</div></div><div class=\"step\"><div class=\"stepn\">2</div><div>Name second nonmetal with <strong>-ide</strong> + prefix.</div></div><div class=\"step\"><div class=\"stepn\">3</div><div>Drop -a or -o before oxide: tetroxide NOT tetraoxide.</div></div><div class=\"ex\"><div class=\"exlbl\">Examples</div>CO&#x2082; &rarr; carbon dioxide &nbsp;|&nbsp; N&#x2082;O&#x2085; &rarr; dinitrogen pentoxide<br>PCl&#x2083; &rarr; phosphorus trichloride &nbsp;|&nbsp; N&#x2082;O&#x2084; &rarr; dinitrogen tetroxide</div></div>";
+  if(id==="poly") return "<div class=\"lcard\"><h2>&#x1F9F2; Polyatomic Ions</h2><p>A <strong>group of atoms carrying a charge as a whole</strong>. Must be memorized.</p><div class=\"ex\"><div class=\"exlbl\">-ate vs -ite</div>More oxygens = -ate: sulfate SO&#x2084;2-, nitrate NO&#x2083;1-<br>Fewer oxygens = -ite: sulfite SO&#x2083;2-, nitrite NO&#x2082;1-</div><div class=\"ex\"><div class=\"exlbl\">Only positive polyatomic ion</div>Ammonium NH&#x2084;+ &mdash; treat like a metal cation</div><div class=\"ex\"><div class=\"exlbl\">Parentheses rule</div>Ca2+ + OH1- &rarr; Ca(OH)&#x2082; &nbsp; parentheses when more than 1 polyatomic ion needed<br>K+ + SO&#x2084;2- &rarr; K&#x2082;SO&#x2084; &nbsp; no parentheses when only 1</div></div>";
+  if(id==="flow") return "<div class=\"lcard\"><h2>&#x1F5FA;&#xFE0F; Naming Flowchart</h2><div style=\"display:flex;flex-direction:column;align-items:center;gap:.35rem;padding:.5rem 0\"><div class=\"fcnode fcq\">Does the compound contain a metal?</div><div style=\"display:flex;gap:3rem\"><span style=\"font-size:11px;color:var(--t3)\">YES &darr;</span><span style=\"font-size:11px;color:var(--t3)\">NO &darr;</span></div><div class=\"fcrow\"><div class=\"fccol\"><div class=\"fcnode fcq\">Transition metal?</div><div style=\"display:flex;gap:1.5rem\"><span style=\"font-size:11px;color:var(--t3)\">YES &darr;</span><span style=\"font-size:11px;color:var(--t3)\">NO &darr;</span></div><div class=\"fcrow\"><div class=\"fccol\"><div class=\"fcnode fca\">Metal + Roman numeral + anion name</div></div><div class=\"fccol\"><div class=\"fcnode fca\">Metal + anion name</div></div></div><div class=\"fcnode fcw\" style=\"margin-top:.35rem\">Polyatomic ion? Use its memorized name. Otherwise use -ide ending.</div></div><div class=\"fccol\"><div class=\"fcnode fcq\">Binary covalent</div><div class=\"fcarr\">&darr;</div><div class=\"fcnode fca\">Prefixes + -ide ending</div><div class=\"fcnode fcw\" style=\"margin-top:.35rem\">No mono- on first. Drop -o/-a before oxide.</div></div></div></div></div>";
+  return "<p>Not found.</p>";
 }
-
-// ── REFERENCE ─────────────────────────────────────────────────────────────────
-function rRef(a) {
-  var h='<div class="ph"><h1>Reference Sheet</h1></div>';
-  h+='<div class="tabrow">';
-  h+='<button class="tab active" id="tab-pi" onclick="swRef(\'pi\')">Polyatomic ions</button>';
-  h+='<button class="tab" id="tab-rules" onclick="swRef(\'rules\')">Naming rules</button>';
-  h+='<button class="tab" id="tab-pref" onclick="swRef(\'pref\')">Prefixes</button>';
-  h+='<button class="tab" id="tab-ox" onclick="swRef(\'ox\')">Oxidation states</button>';
-  h+='</div><div id="rC"></div>';
-  a.innerHTML=h;
-  swRef('pi');
+function rRef(a){
+  a.innerHTML="<div class=\"ph\"><h1>Reference Sheet</h1></div><div class=\"tabrow\"><button class=\"tab active\" id=\"tab-pi\" onclick=\"swRef('pi')\">Polyatomic ions</button><button class=\"tab\" id=\"tab-rules\" onclick=\"swRef('rules')\">Naming rules</button><button class=\"tab\" id=\"tab-pref\" onclick=\"swRef('pref')\">Prefixes</button><button class=\"tab\" id=\"tab-ox\" onclick=\"swRef('ox')\">Oxidation states</button></div><div id=\"rC\"></div>";
+  swRef("pi");
 }
-function swRef(t) {
-  var tabs=document.querySelectorAll('.tab');
-  for(var i=0;i<tabs.length;i++) tabs[i].classList.remove('active');
-  g('tab-'+t).classList.add('active');
-  var c=g('rC');
-  if(t==='pi'){
-    var h='<div class="prgrid">';
-    for(var i=0;i<PI.length;i++){
-      h+='<div class="prc"><div class="prcn">'+PI[i].n+'</div><div class="prcf">'+PI[i].f+'<sup style="font-size:.6em">'+PI[i].c+'</sup></div></div>';
-    }
-    c.innerHTML=h+'</div>';
-  } else if(t==='rules'){
-    c.innerHTML=''
-      +'<div class="rcard" style="border-left-color:var(--blue)"><h3>Binary ionic</h3><p>1. Name metal cation unchanged.<br>2. Name nonmetal anion with <strong>-ide</strong>.<br>3. Transition metals get Roman numeral: <em>iron(III) oxide</em>.<br><strong>No prefixes.</strong></p></div>'
-      +'<div class="rcard" style="border-left-color:var(--gn)"><h3>Binary covalent</h3><p>1. Name first nonmetal (skip mono- if only 1).<br>2. Name second nonmetal with <strong>-ide</strong>.<br>3. Add prefixes to both.<br>4. Drop -o/-a before "oxide": <em>tetroxide</em> not <em>tetraoxide</em>.</p></div>'
-      +'<div class="rcard" style="border-left-color:var(--am)"><h3>Ionic + polyatomic ions</h3><p>1. Name cation (metal or ammonium).<br>2. Name polyatomic anion as memorized.<br>3. Parentheses when subscript &gt; 1: <em>Ba(NO&#x2082;)&#x2082;</em>.<br>4. Transition metals still need Roman numerals.</p></div>'
-      +'<div class="rcard" style="border-left-color:var(--bds)"><h3>-ide vs -ate vs -ite</h3><p><strong>-ide</strong> = monatomic anion (chloride, sulfide)<br><strong>-ate</strong> = polyatomic, more oxygens (sulfate SO&#x2084;&#xB2;&#x207B;)<br><strong>-ite</strong> = polyatomic, fewer oxygens (sulfite SO&#x2083;&#xB2;&#x207B;)</p></div>'
-      +'<div class="rcard" style="border-left-color:var(--pu)"><h3>Roman numeral calculation</h3><p>Total anion charge &divide; number of metal ions = metal charge &rarr; Roman numeral.<br><em>Fe&#x2082;O&#x2083;</em>: 3&times;(&minus;2)=&minus;6, &divide;2=+3 each &rarr; iron(III)</p></div>'
-      +'<div class="rcard" style="border-left-color:var(--rd)"><h3>Exceptions (no Roman numeral)</h3><p>Ag always +1 &nbsp;&bull;&nbsp; Zn always +2 &nbsp;&bull;&nbsp; Cd always +2</p></div>';
-  } else if(t==='pref'){
-    var ps=[['mono-','1'],['di-','2'],['tri-','3'],['tetra-','4'],['penta-','5'],['hexa-','6'],['hepta-','7'],['octa-','8'],['nona-','9'],['deca-','10']];
-    var h='<div class="pgrid">';
-    for(var i=0;i<ps.length;i++) h+='<div class="pitm"><span class="pref-name">'+ps[i][0]+'</span><span class="pref-num">'+ps[i][1]+'</span></div>';
-    c.innerHTML=h+'</div><div class="notice">&#x26A0; Never use mono- on first element. Drop -o/-a before "oxide": monoxide, dioxide, trioxide, tetroxide, pentoxide, hexoxide, heptoxide, octoxide, nonoxide, decoxide.</div>';
-  } else if(t==='ox'){
-    c.innerHTML=''
-      +'<div class="rcard" style="border-left-color:var(--blue)"><h3>Main group elements</h3><p><strong>Group 1:</strong> +1 &nbsp;&bull;&nbsp; <strong>Group 2:</strong> +2 &nbsp;&bull;&nbsp; <strong>Group 13:</strong> +3<br><strong>Group 15:</strong> &minus;3 &nbsp;&bull;&nbsp; <strong>Group 16:</strong> &minus;2 &nbsp;&bull;&nbsp; <strong>Group 17:</strong> &minus;1 &nbsp;&bull;&nbsp; <strong>Group 18:</strong> 0</p></div>'
-      +'<div class="rcard" style="border-left-color:var(--am)"><h3>Transition metals (variable charge)</h3><p><strong>Fe:</strong> +2 or +3 &nbsp;&bull;&nbsp; <strong>Cu:</strong> +1 or +2 &nbsp;&bull;&nbsp; <strong>Sn:</strong> +2 or +4 &nbsp;&bull;&nbsp; <strong>Pb:</strong> +2 or +4<br><strong>Mn:</strong> +2, +4, +7 &nbsp;&bull;&nbsp; <strong>Cr:</strong> +2 or +3 &nbsp;&bull;&nbsp; <strong>Co:</strong> +2 or +3<br><strong>Ag:</strong> +1 (no Roman numeral) &nbsp;&bull;&nbsp; <strong>Zn:</strong> +2 (no Roman numeral)</p></div>'
-      +'<div class="rcard" style="border-left-color:var(--gn)"><h3>Special cases</h3><p><strong>H:</strong> +1 usually; &minus;1 in metal hydrides<br><strong>O:</strong> &minus;2 usually; &minus;1 in peroxides<br><strong>F:</strong> always &minus;1</p></div>';
+function swRef(t){
+  var tabs=document.querySelectorAll(".tab");
+  for(var i=0;i<tabs.length;i++) tabs[i].classList.remove("active");
+  g("tab-"+t).classList.add("active");
+  var c=g("rC");
+  if(t==="pi"){
+    var h="<div class=\"prgrid\">";
+    for(var i=0;i<PI.length;i++) h+="<div class=\"prc\"><div class=\"prcn\">"+PI[i].n+"</div><div class=\"prcf\">"+PI[i].f+"<sup style=\"font-size:.6em\">"+PI[i].c+"</sup></div></div>";
+    c.innerHTML=h+"</div>";
+  } else if(t==="rules"){
+    c.innerHTML="<div class=\"rcard\" style=\"border-left-color:var(--blue)\"><h3>Binary ionic</h3><p>1. Metal name unchanged.<br>2. Nonmetal with <strong>-ide</strong>.<br>3. Transition metals get Roman numeral.<br><strong>No prefixes.</strong></p></div>"
+      +"<div class=\"rcard\" style=\"border-left-color:var(--gn)\"><h3>Binary covalent</h3><p>1. First nonmetal (skip mono- if only 1).<br>2. Second nonmetal with <strong>-ide</strong>.<br>3. Add prefixes to both.<br>4. Drop -o/-a before oxide: tetroxide not tetraoxide.</p></div>"
+      +"<div class=\"rcard\" style=\"border-left-color:var(--am)\"><h3>Ionic + polyatomic</h3><p>1. Name cation.<br>2. Name polyatomic anion as memorized.<br>3. Parentheses when ion appears more than once.<br>4. Transition metals still need Roman numerals.</p></div>"
+      +"<div class=\"rcard\" style=\"border-left-color:var(--bds)\"><h3>-ide vs -ate vs -ite</h3><p><strong>-ide</strong> = monatomic anion<br><strong>-ate</strong> = polyatomic, more oxygens<br><strong>-ite</strong> = polyatomic, fewer oxygens</p></div>"
+      +"<div class=\"rcard\" style=\"border-left-color:var(--pu)\"><h3>Roman numeral calculation</h3><p>Total anion charge &divide; number of metal ions = metal charge.<br>Fe&#x2082;O&#x2083;: 3&times;2-=6-, &divide;2=3+ &rarr; iron(III)</p></div>"
+      +"<div class=\"rcard\" style=\"border-left-color:var(--rd)\"><h3>No Roman numeral needed</h3><p>Ag always 1+ &nbsp;&bull;&nbsp; Zn always 2+ &nbsp;&bull;&nbsp; Cd always 2+</p></div>";
+  } else if(t==="pref"){
+    var ps=[["mono-","1"],["di-","2"],["tri-","3"],["tetra-","4"],["penta-","5"],["hexa-","6"],["hepta-","7"],["octa-","8"],["nona-","9"],["deca-","10"]];
+    var h="<div class=\"pgrid\">";
+    for(var i=0;i<ps.length;i++) h+="<div class=\"pitm\"><span class=\"pref-n\">"+ps[i][0]+"</span><span class=\"pref-d\">"+ps[i][1]+"</span></div>";
+    c.innerHTML=h+"</div><div class=\"notice\">Never use mono- on first element. Drop -o/-a before oxide: monoxide, dioxide, trioxide, tetroxide, pentoxide, hexoxide, heptoxide, octoxide, nonoxide, decoxide.</div>";
+  } else {
+    c.innerHTML="<div class=\"rcard\" style=\"border-left-color:var(--blue)\"><h3>Main group</h3><p>Group 1: +1 &nbsp;&bull;&nbsp; Group 2: +2 &nbsp;&bull;&nbsp; Group 13: +3<br>Group 15: 3- &nbsp;&bull;&nbsp; Group 16: 2- &nbsp;&bull;&nbsp; Group 17: 1- &nbsp;&bull;&nbsp; Group 18: 0</p></div>"
+      +"<div class=\"rcard\" style=\"border-left-color:var(--am)\"><h3>Transition metals</h3><p>Fe: 2+ or 3+ &nbsp;&bull;&nbsp; Cu: 1+ or 2+ &nbsp;&bull;&nbsp; Sn: 2+ or 4+ &nbsp;&bull;&nbsp; Pb: 2+ or 4+<br>Mn: 2+, 4+, 7+ &nbsp;&bull;&nbsp; Cr: 2+ or 3+ &nbsp;&bull;&nbsp; Co: 2+ or 3+<br>Ag: 1+ (no Roman numeral) &nbsp;&bull;&nbsp; Zn: 2+ (no Roman numeral)</p></div>"
+      +"<div class=\"rcard\" style=\"border-left-color:var(--gn)\"><h3>Special</h3><p>H: +1 usually, 1- in hydrides &nbsp;&bull;&nbsp; O: 2- usually, 1- in peroxides &nbsp;&bull;&nbsp; F: always 1-</p></div>";
   }
 }
-
-// ── PERIODIC TABLE ────────────────────────────────────────────────────────────
-function togglePT(){g('ptOverlay').classList.toggle('hidden');}
+function togglePT(){g("ptOverlay").classList.toggle("hidden");}
 function buildPT(){
   var ELS=[
-    {s:'H',n:1,g:1,p:1,c:'nm'},{s:'He',n:2,g:18,p:1,c:'ng'},
-    {s:'Li',n:3,g:1,p:2,c:'me'},{s:'Be',n:4,g:2,p:2,c:'me'},{s:'B',n:5,g:13,p:2,c:'ml'},{s:'C',n:6,g:14,p:2,c:'nm'},{s:'N',n:7,g:15,p:2,c:'nm'},{s:'O',n:8,g:16,p:2,c:'nm'},{s:'F',n:9,g:17,p:2,c:'hl'},{s:'Ne',n:10,g:18,p:2,c:'ng'},
-    {s:'Na',n:11,g:1,p:3,c:'me'},{s:'Mg',n:12,g:2,p:3,c:'me'},{s:'Al',n:13,g:13,p:3,c:'me'},{s:'Si',n:14,g:14,p:3,c:'ml'},{s:'P',n:15,g:15,p:3,c:'nm'},{s:'S',n:16,g:16,p:3,c:'nm'},{s:'Cl',n:17,g:17,p:3,c:'hl'},{s:'Ar',n:18,g:18,p:3,c:'ng'},
-    {s:'K',n:19,g:1,p:4,c:'me'},{s:'Ca',n:20,g:2,p:4,c:'me'},{s:'Sc',n:21,g:3,p:4,c:'tm'},{s:'Ti',n:22,g:4,p:4,c:'tm'},{s:'V',n:23,g:5,p:4,c:'tm'},{s:'Cr',n:24,g:6,p:4,c:'tm'},{s:'Mn',n:25,g:7,p:4,c:'tm'},{s:'Fe',n:26,g:8,p:4,c:'tm'},{s:'Co',n:27,g:9,p:4,c:'tm'},{s:'Ni',n:28,g:10,p:4,c:'tm'},{s:'Cu',n:29,g:11,p:4,c:'tm'},{s:'Zn',n:30,g:12,p:4,c:'tm'},{s:'Ga',n:31,g:13,p:4,c:'me'},{s:'Ge',n:32,g:14,p:4,c:'ml'},{s:'As',n:33,g:15,p:4,c:'ml'},{s:'Se',n:34,g:16,p:4,c:'nm'},{s:'Br',n:35,g:17,p:4,c:'hl'},{s:'Kr',n:36,g:18,p:4,c:'ng'},
-    {s:'Rb',n:37,g:1,p:5,c:'me'},{s:'Sr',n:38,g:2,p:5,c:'me'},{s:'Y',n:39,g:3,p:5,c:'tm'},{s:'Zr',n:40,g:4,p:5,c:'tm'},{s:'Nb',n:41,g:5,p:5,c:'tm'},{s:'Mo',n:42,g:6,p:5,c:'tm'},{s:'Tc',n:43,g:7,p:5,c:'tm'},{s:'Ru',n:44,g:8,p:5,c:'tm'},{s:'Rh',n:45,g:9,p:5,c:'tm'},{s:'Pd',n:46,g:10,p:5,c:'tm'},{s:'Ag',n:47,g:11,p:5,c:'tm'},{s:'Cd',n:48,g:12,p:5,c:'tm'},{s:'In',n:49,g:13,p:5,c:'me'},{s:'Sn',n:50,g:14,p:5,c:'me'},{s:'Sb',n:51,g:15,p:5,c:'ml'},{s:'Te',n:52,g:16,p:5,c:'ml'},{s:'I',n:53,g:17,p:5,c:'hl'},{s:'Xe',n:54,g:18,p:5,c:'ng'},
-    {s:'Cs',n:55,g:1,p:6,c:'me'},{s:'Ba',n:56,g:2,p:6,c:'me'},{s:'La',n:57,g:3,p:6,c:'tm'},{s:'Hf',n:72,g:4,p:6,c:'tm'},{s:'Ta',n:73,g:5,p:6,c:'tm'},{s:'W',n:74,g:6,p:6,c:'tm'},{s:'Re',n:75,g:7,p:6,c:'tm'},{s:'Os',n:76,g:8,p:6,c:'tm'},{s:'Ir',n:77,g:9,p:6,c:'tm'},{s:'Pt',n:78,g:10,p:6,c:'tm'},{s:'Au',n:79,g:11,p:6,c:'tm'},{s:'Hg',n:80,g:12,p:6,c:'tm'},{s:'Tl',n:81,g:13,p:6,c:'me'},{s:'Pb',n:82,g:14,p:6,c:'me'},{s:'Bi',n:83,g:15,p:6,c:'me'},{s:'Po',n:84,g:16,p:6,c:'ml'},{s:'At',n:85,g:17,p:6,c:'hl'},{s:'Rn',n:86,g:18,p:6,c:'ng'},
-    {s:'Fr',n:87,g:1,p:7,c:'me'},{s:'Ra',n:88,g:2,p:7,c:'me'}
+    {s:"H",n:1,g:1,p:1,c:"nm"},{s:"He",n:2,g:18,p:1,c:"ng"},
+    {s:"Li",n:3,g:1,p:2,c:"me"},{s:"Be",n:4,g:2,p:2,c:"me"},{s:"B",n:5,g:13,p:2,c:"ml"},{s:"C",n:6,g:14,p:2,c:"nm"},{s:"N",n:7,g:15,p:2,c:"nm"},{s:"O",n:8,g:16,p:2,c:"nm"},{s:"F",n:9,g:17,p:2,c:"hl"},{s:"Ne",n:10,g:18,p:2,c:"ng"},
+    {s:"Na",n:11,g:1,p:3,c:"me"},{s:"Mg",n:12,g:2,p:3,c:"me"},{s:"Al",n:13,g:13,p:3,c:"me"},{s:"Si",n:14,g:14,p:3,c:"ml"},{s:"P",n:15,g:15,p:3,c:"nm"},{s:"S",n:16,g:16,p:3,c:"nm"},{s:"Cl",n:17,g:17,p:3,c:"hl"},{s:"Ar",n:18,g:18,p:3,c:"ng"},
+    {s:"K",n:19,g:1,p:4,c:"me"},{s:"Ca",n:20,g:2,p:4,c:"me"},{s:"Sc",n:21,g:3,p:4,c:"tm"},{s:"Ti",n:22,g:4,p:4,c:"tm"},{s:"V",n:23,g:5,p:4,c:"tm"},{s:"Cr",n:24,g:6,p:4,c:"tm"},{s:"Mn",n:25,g:7,p:4,c:"tm"},{s:"Fe",n:26,g:8,p:4,c:"tm"},{s:"Co",n:27,g:9,p:4,c:"tm"},{s:"Ni",n:28,g:10,p:4,c:"tm"},{s:"Cu",n:29,g:11,p:4,c:"tm"},{s:"Zn",n:30,g:12,p:4,c:"tm"},{s:"Ga",n:31,g:13,p:4,c:"me"},{s:"Ge",n:32,g:14,p:4,c:"ml"},{s:"As",n:33,g:15,p:4,c:"ml"},{s:"Se",n:34,g:16,p:4,c:"nm"},{s:"Br",n:35,g:17,p:4,c:"hl"},{s:"Kr",n:36,g:18,p:4,c:"ng"},
+    {s:"Rb",n:37,g:1,p:5,c:"me"},{s:"Sr",n:38,g:2,p:5,c:"me"},{s:"Y",n:39,g:3,p:5,c:"tm"},{s:"Zr",n:40,g:4,p:5,c:"tm"},{s:"Nb",n:41,g:5,p:5,c:"tm"},{s:"Mo",n:42,g:6,p:5,c:"tm"},{s:"Tc",n:43,g:7,p:5,c:"tm"},{s:"Ru",n:44,g:8,p:5,c:"tm"},{s:"Rh",n:45,g:9,p:5,c:"tm"},{s:"Pd",n:46,g:10,p:5,c:"tm"},{s:"Ag",n:47,g:11,p:5,c:"tm"},{s:"Cd",n:48,g:12,p:5,c:"tm"},{s:"In",n:49,g:13,p:5,c:"me"},{s:"Sn",n:50,g:14,p:5,c:"me"},{s:"Sb",n:51,g:15,p:5,c:"ml"},{s:"Te",n:52,g:16,p:5,c:"ml"},{s:"I",n:53,g:17,p:5,c:"hl"},{s:"Xe",n:54,g:18,p:5,c:"ng"},
+    {s:"Cs",n:55,g:1,p:6,c:"me"},{s:"Ba",n:56,g:2,p:6,c:"me"},{s:"La",n:57,g:3,p:6,c:"tm"},{s:"Hf",n:72,g:4,p:6,c:"tm"},{s:"Ta",n:73,g:5,p:6,c:"tm"},{s:"W",n:74,g:6,p:6,c:"tm"},{s:"Re",n:75,g:7,p:6,c:"tm"},{s:"Os",n:76,g:8,p:6,c:"tm"},{s:"Ir",n:77,g:9,p:6,c:"tm"},{s:"Pt",n:78,g:10,p:6,c:"tm"},{s:"Au",n:79,g:11,p:6,c:"tm"},{s:"Hg",n:80,g:12,p:6,c:"tm"},{s:"Tl",n:81,g:13,p:6,c:"me"},{s:"Pb",n:82,g:14,p:6,c:"me"},{s:"Bi",n:83,g:15,p:6,c:"me"},{s:"Po",n:84,g:16,p:6,c:"ml"},{s:"At",n:85,g:17,p:6,c:"hl"},{s:"Rn",n:86,g:18,p:6,c:"ng"},
+    {s:"Fr",n:87,g:1,p:7,c:"me"},{s:"Ra",n:88,g:2,p:7,c:"me"}
   ];
   var cells=[];
   for(var r=0;r<7;r++){cells.push([]);for(var cc=0;cc<18;cc++)cells[r].push(null);}
   for(var i=0;i<ELS.length;i++){var e=ELS[i];cells[e.p-1][e.g-1]=e;}
-  var h='<div class="pt-grid">';
-  for(var r=0;r<7;r++){
-    for(var cc=0;cc<18;cc++){
-      var e=cells[r][cc];
-      if(e) h+='<div class="el '+e.c+'" title="'+e.s+' ('+e.n+')"><div class="anum">'+e.n+'</div><div class="sym">'+e.s+'</div></div>';
-      else h+='<div class="el em"></div>';
-    }
-  }
-  h+='</div>';
-  var LCLS=[['me','Metal'],['tm','Transition'],['ml','Metalloid'],['nm','Nonmetal'],['hl','Halogen'],['ng','Noble gas']];
-  h+='<div style="display:flex;flex-wrap:wrap;gap:8px;padding:.6rem .75rem 0;font-size:11px">';
-  for(var i=0;i<LCLS.length;i++) h+='<div style="display:flex;align-items:center;gap:4px"><div class="el '+LCLS[i][0]+'" style="width:16px;height:16px;padding:0"></div>'+LCLS[i][1]+'</div>';
-  h+='</div>';
-  g('ptBody').innerHTML=h;
+  var h="<div class=\"pt-grid\">";
+  for(var r=0;r<7;r++){for(var cc=0;cc<18;cc++){var e=cells[r][cc];if(e)h+="<div class=\"el "+e.c+"\" title=\""+e.s+" ("+e.n+")\" ><div class=\"anum\">"+e.n+"</div><div class=\"sym\">"+e.s+"</div></div>";else h+="<div class=\"el em\"></div>";}}
+  h+="</div>";
+  var LCLS=[["me","Metal"],["tm","Transition"],["ml","Metalloid"],["nm","Nonmetal"],["hl","Halogen"],["ng","Noble gas"]];
+  h+="<div style=\"display:flex;flex-wrap:wrap;gap:8px;padding:.6rem .75rem 0;font-size:11px\">";
+  for(var i=0;i<LCLS.length;i++) h+="<div style=\"display:flex;align-items:center;gap:4px\"><div class=\"el "+LCLS[i][0]+"\" style=\"width:16px;height:16px;padding:0\"></div>"+LCLS[i][1]+"</div>";
+  g("ptBody").innerHTML=h+"</div>";
 }
 buildPT();
-setMode('learn');
+setMode("learn");
 </script>
 </body>
 </html>
